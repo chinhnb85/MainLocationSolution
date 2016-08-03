@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Hướng dẫn mua hàng";
+}
+
+<div class="list_product">
+    <div class="title">
+        <h1>Hướng dẫn mua hàng</h1>
+    </div>
+    <div class="list_content" style="margin-top:20px;">
+        <img src="/media/fck/huongdan.jpg" width="500" height="400" alt=""><br>
+        <strong><u><span style="font-size: large;">*** ĐỐI VỚI NHỮNG BẠN Ở NGOẠI TỈNH ***</span></u></strong><span style="font-size: large;">
+            <br>
+            <br>
+        </span><span style="font-size: large;">
+            Chuyên Hàng Nga không sử dụng dịch vụ COD nên các bạn vui lòng chuyển khoản trước 100%. Sau khi nhận được tiền Chuyên Hàng Nga sẽ chuyển hàng theo đường bưu điện, chuyển phát nhanh hoặc theo hình thức khách hàng yêu cầu. <br>
+            <span style="color: rgb(255, 0, 0);"><u><em>- Lưu ý:</em></u><em> Khách hàng chịu hoàn toàn phí vận chuyển</em></span><em>
+                <br>
+            </em>
+        </span><em>
+            <span style="font-size: medium;">
+                <strong>
+                    <br>
+                </strong>
+            </span>
+        </em><span style="color: rgb(255, 0, 0);"><em><span style="font-size: medium;"><strong>** THÔNG TIN TÀI KHOẢN: **</strong></span>&nbsp;</em></span><br>
+        <span style="color: rgb(55, 62, 77); font-family: helvetica, arial, sans-serif; line-height: 15.36px; white-space: pre-wrap; background-color: rgb(254, 254, 254);">
+            <br>
+        </span><span style="font-size: medium;">
+            <span style="color: rgb(55, 62, 77); font-family: helvetica, arial, sans-serif; line-height: 15.36px; white-space: pre-wrap; background-color: rgb(254, 254, 254);">
+                - Ngân hàng Vietcombank chi nhánh Hà Nội. <br>
+                Số tài khoản:<span style="color: rgb(255, 0, 0);"><strong> 0021001927293</strong></span>.  Chủ tài khoản: Lê Thu Huyền
+            </span><br style="color: rgb(55, 62, 77); font-family: helvetica, arial, sans-serif; line-height: 15.36px; white-space: pre-wrap; background-color: rgb(254, 254, 254);">
+            <span style="color: rgb(55, 62, 77); font-family: helvetica, arial, sans-serif; line-height: 15.36px; white-space: pre-wrap; background-color: rgb(254, 254, 254);">
+                <br>
+                - Ngân hàng nông nghiệp và phát triển nông thôn Agribank. <br>
+                Số tài khoản: <span style="color: rgb(255, 0, 0);"><strong>1200209197952</strong></span>.  Chủ tài khoản: Lê Thu Huyền<br>
+                <br>
+            </span><span style="color: rgb(55, 62, 77); font-family: helvetica, arial, sans-serif; line-height: 15.36px; white-space: pre-wrap; background-color: rgb(254, 254, 254);">
+                - Ngân hàng BIDV.<br>
+                Số tài khoản: <span style="color: rgb(255, 0, 0);"><strong>26110000072296</strong></span>. Chủ tài khoản Lê Thu Huyền
+            </span><span style="color: rgb(55, 62, 77); font-family: helvetica, arial, sans-serif; line-height: 15.36px; white-space: pre-wrap; background-color: rgb(254, 254, 254);"><span class="_1az _1a- _4_q0" style="display: inline-block; vertical-align: top; height: 16px; width: 16px; margin: 0px 1px; background-image: url(&quot;/rsrc.php/v2/yO/r/ex8r-_gkt_Y.png&quot;); background-size: auto; background-position: 0px -1938px; background-repeat: no-repeat;">.</span></span>
+        </span>
+    </div>
+</div>
+<script>
+    $('.listcategory').slideUp();
+    var isclick = true;
+    $('.btnshowcat').click(function () {
+        if (isclick == true) {
+            $('.listcategory').slideDown();
+            isclick = false;
+        }
+        else {
+            $('.listcategory').slideUp();
+            isclick = true;
+        }
+    });
+    var nav = $('.menu_fix');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 136) {
+            nav.addClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .listcategory').slideUp();
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'initial');
+            isclick = true;
+
+        } else {
+            nav.removeClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'absolute');
+        }
+    });
+</script>
+

@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Liên hệ";
+}
+
+<div class="list_product">
+    <div class="title">
+
+        <h1>Liên hệ với chúng tôi</h1>
+
+
+    </div>
+    <div class="list_content" style="margin-top:20px;">
+        <h2 style="text-align: center;">
+            <span style="font-size: xx-large;">
+                <small>
+                    <span style="background-color: lime;">
+                        <code>
+                            &nbsp;CHUYÊN HÀNG NGA<br>
+                            <br>
+                            Địa chỉ: 282 đường Láng - Đống Đa - Hà Nội.<br>
+                            <br>
+                            Hotline: 0912.899.747&nbsp;<br>
+                            <br>
+                            Email: lienhe@chuyenhangnga.com
+                        </code>
+                    </span>
+                </small>
+            </span>
+        </h2>
+    </div>
+</div>
+<script>
+    $('.listcategory').slideUp();
+    var isclick = true;
+    $('.btnshowcat').click(function () {
+        if (isclick == true) {
+            $('.listcategory').slideDown();
+            isclick = false;
+        }
+        else {
+            $('.listcategory').slideUp();
+            isclick = true;
+        }
+    });
+    var nav = $('.menu_fix');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 136) {
+            nav.addClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .listcategory').slideUp();
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'initial');
+            isclick = true;
+
+        } else {
+            nav.removeClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'absolute');
+        }
+    });
+</script>
+

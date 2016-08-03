@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace WebClient.Controllers
 {
-    public class ProductController : Controller
+    public class CartController : Controller
     {
-        // GET: Product
+        // GET: Cart
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Detail()
         {
             return View();
         }

@@ -5,27 +5,27 @@
 <script src="/Assets/Js/Zoom/jquery.elevateZoom-2.5.5.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-jQuery(document).ready(function() {
-	$(".ajax").click(function(){
-		alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
-		var item = $(this).attr('title');
-		$('.cart').load('/action/cart_product.php?item='+item);
-                $('body,html').animate({scrollTop:0},800);
-	});
-	$(".btn-buy-p").click(function(){
-		alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
-		var item = $('.btn-buy-p .ajax1').attr('title');
-		var cart_get = $('input.numberproduct').val();
-		$('.cart').load('/action/cart_product.php?item='+item+'&cart_get='+cart_get);
-                $('body,html').animate({scrollTop:0},800);
-	});
-	$('.layout_list ul li img').click(function(){
-		var small=$(this).attr('src');
-		var large=$(this).attr('rel');
-		$('#zoom_01').attr('src',small);
-		$('.zoomWindowContainer .zoomWindow').css({'background-image':'url("'+large+'")'});
-	});
-});
+    jQuery(document).ready(function () {
+        $(".ajax").click(function () {
+            alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
+            var item = $(this).attr('title');
+            $('.cart').load('/action/cart_product.php?item=' + item);
+            $('body,html').animate({ scrollTop: 0 }, 800);
+        });
+        $(".btn-buy-p").click(function () {
+            alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
+            var item = $('.btn-buy-p .ajax1').attr('title');
+            var cart_get = $('input.numberproduct').val();
+            $('.cart').load('/action/cart_product.php?item=' + item + '&cart_get=' + cart_get);
+            $('body,html').animate({ scrollTop: 0 }, 800);
+        });
+        $('.layout_list ul li img').click(function () {
+            var small = $(this).attr('src');
+            var large = $(this).attr('rel');
+            $('#zoom_01').attr('src', small);
+            $('.zoomWindowContainer .zoomWindow').css({ 'background-image': 'url("' + large + '")' });
+        });
+    });
 
 </script>
 <div class="detail_header">
@@ -44,7 +44,7 @@ jQuery(document).ready(function() {
 <div class="detail_content">
     <div class="left_detail">
         <div class="image gallery" id="Gallery">
-            <img src="/Assets/Js/Zoom/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg" id="zoom_01" alt="Sữa dê Mamako 3" data-zoom-image="/media/product/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg" rel="/media/product/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg">
+            <img src="/Assets/Images/sp/1462509125_Kem_dưỡng_ngày_Natura_Siberica.jpg" id="zoom_01" alt="Sữa dê Mamako 3" data-zoom-image="/Assets/Images/sp/1462509125_Kem_dưỡng_ngày_Natura_Siberica.jpg" rel="/Assets/Images/sp/1462509125_Kem_dưỡng_ngày_Natura_Siberica.jpg">
         </div>
     </div>
     <div class="right_detail">
@@ -93,7 +93,7 @@ jQuery(document).ready(function() {
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="home">
-           <p>Chi tiết sản phẩm</p>
+            <p>Chi tiết sản phẩm</p>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
             <p>Đánh giá</p>
@@ -425,13 +425,15 @@ jQuery(document).ready(function() {
                 </ul>
             </div>
             <div class="bx-controls bx-has-pager bx-has-controls-direction">
-            <div class="bx-pager bx-default-pager">
-                <div class="bx-pager-item">
-                <a href="/Sua-de-mamako-3-.html" data-slide-index="0" class="bx-pager-link active">1</a>
+                <div class="bx-pager bx-default-pager">
+                    <div class="bx-pager-item">
+                        <a href="/Sua-de-mamako-3-.html" data-slide-index="0" class="bx-pager-link active">1</a>
+                    </div>
+                    <div class="bx-pager-item">
+                        <a href="/Sua-de-mamako-3-.html" data-slide-index="1" class="bx-pager-link">2</a>
+                    </div><div class="bx-pager-item"><a href="/Sua-de-mamako-3-.html" data-slide-index="2" class="bx-pager-link">3</a></div>
                 </div>
-                <div class="bx-pager-item">
-                <a href="/Sua-de-mamako-3-.html" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="/Sua-de-mamako-3-.html" data-slide-index="2" class="bx-pager-link">3</a></div></div>
-            
+
             </div>
         </div>
         <div id="mystickytooltip" class="stickytooltip">
@@ -443,12 +445,12 @@ jQuery(document).ready(function() {
     </div>
 </div>
 <script>
-            $('.bxslider').bxSlider({
-            minSlides: 3,
-            maxSlides: 4,
-            slideWidth: 215,
-            slideMargin: 20
-          });
+    $('.bxslider').bxSlider({
+        minSlides: 3,
+        maxSlides: 4,
+        slideWidth: 215,
+        slideMargin: 20
+    });
 </script>
 
 <style>
@@ -464,48 +466,44 @@ jQuery(document).ready(function() {
         width: 100% !important;
     }
 </style>
-<script src="/Assets/Js/Zoom/platform.js" async="" defer="" gapi_processed="true">
-  {lang: 'vi'}
-</script>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=780020678786801";
-  fjs.parentNode.insertBefore(js, fjs);
+<script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=780020678786801";
+    fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <script>
-            var isclick = true;
-           $('.btnshowcat').click(function(){
-               if(isclick == true)
-               {
-                   $('.listcategory').slideDown();
-                   isclick = false;
-               }
-               else
-               {
-                   $('.listcategory').slideUp();
-                   isclick = true;
-               }
-           });
-          var nav = $('.menu_fix');
+    $('.listcategory').slideUp();
+    var isclick = true;
+    $('.btnshowcat').click(function () {
+        if (isclick == true) {
+            $('.listcategory').slideDown();
+            isclick = false;
+        }
+        else {
+            $('.listcategory').slideUp();
+            isclick = true;
+        }
+    });
+    var nav = $('.menu_fix');
 
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 136) {
-                    nav.addClass("nav_menutop");
-                    $('#wrapper .content .content_1 .category .listcategory').slideUp();
-                    $('#wrapper .content .content_1 .category .nav_menu_cat').css('position','initial');
-                    isclick = true;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 136) {
+            nav.addClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .listcategory').slideUp();
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'inherit');
+            isclick = true;
 
-                } else {
-                    nav.removeClass("nav_menutop");
-                    $('#wrapper .content .content_1 .category .nav_menu_cat').css('position','absolute');
-                }
-            });
+        } else {
+            nav.removeClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'absolute');
+        }
+    });
 </script>
 <script>
-	$("#zoom_01").elevateZoom({
-	});
+    $("#zoom_01").elevateZoom({
+    });
 </script>
-

@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Giỏ hàng";
+}
+
+<div class="cart_title">
+    <h1><img src="http://chuyenhangnga.com/themes/shopngoc/img/icon_cart.png" alt="Icon Cart" style="margin-top:-10px;"> Giỏ hàng của bạn</h1>
+    <div class="cart_content"><form method="post"><table class="product_pay"><tbody><tr><th width="20%">Hình ảnh</th><th width="30%">Tên sản phẩm</th><th width="10%">Số lượng</th><th width="15%">Giá</th><th width="20%">Tổng</th><th width="5%">Xóa</th></tr><tr><td><img style="margin:2px;" src="http://chuyenhangnga.com/media/product/1462520664_Kem_dưỡng_đêm_Natura_Siberica.jpg" width="100%" title="Kem dưỡng đêm Natura Siberica " alt="Kem dưỡng đêm Natura Siberica "></td><td><span style="color:#232f3e;font-size:16px;font-weight:bold">Kem dưỡng đêm Natura Siberica </span></td><td><input type="text" name="qty[148]" size="1%" value="1"></td><td><span style="color:#bd2b0a">230,000 VND</span></td><td><span style="color:#bd2b0a;font-weight:bold">230,000 VND</span></td><td><a onclick="return confirm('Bạn có muốn xóa sản phẩm này không?');" href="http://chuyenhangnga.com/action/delcart.php?productid=148"><img class="icon_del" src="http://chuyenhangnga.com//images/delete.png" width="25" height="25" title="xoa"></a></td></tr><tr><td colspan="7" style="text-align:right;padding-right:20px;"><b>Tổng tiền của đơn hàng: <font color="#bd2b0a">230,000 VNĐ</font></b></td></tr></tbody></table><div class="pro" align="center"><br><input style="margin-right:20px;float:left;background:#66c023;border:none;color:#fff;height:35px;padding:0px 10px 0px 10px;border-radius:3px" type="submit" class="button_login" name="submit" value="Cập nhật giỏ hàng"><a style="color:#fff;background:#4d4d4d;display:block;height:35px;line-height:35px;border-radius:3px;width:150px;float:right" class="button_login" onclick="return confirm('Bạn có muốn xóa toàn bộ giỏ hàng không?');" href="http://chuyenhangnga.com/action/delcart.php?productid=0">Xóa giỏ hàng</a><a style="background:#ffc600;height:35px;display:block;width:150px;color:#fff;line-height:35px;float:right;border-radius:3px;margin-right:10px" class="button_login" href="http://chuyenhangnga.com/">Tiếp tục mua hàng</a></div></form></div>
+</div>
+<div class="cart-pay">
+    <h2>Thanh toán</h2>
+    <form id="cart_content_form" class="cart_content" action="http://chuyenhangnga.com/action/pay_product.php" method="post">
+        <div id="err" style="display: none">
+            <div id="str_error"></div>
+            <iframe name="fr_submit" width="0" height="0" style=""></iframe>
+        </div>
+        <div class="form_cart_pay">
+            <p style="margin-top:20px">
+                <label class="required">Họ và tên người nhận: </label> <input type="text" style="width: 300px" value="" name="order_name">
+            </p>
+            <p>
+                <label class="required">Địa chỉ người nhận: </label> <input type="text" style="width: 300px" value="" name="order_address">
+            </p>
+            <p>
+                <label class="required">Số điện thoại người nhận: </label> <input type="text" style="width: 300px" value="" name="order_phone">
+            </p>
+            <p>
+                <label class="required">Email người nhận: </label>
+                <input type="text" style="width: 300px" value="" name="order_email">
+            </p>
+
+            <p>
+                <label class="required">Mã bảo mật:</label>
+                <input style="width:170px;" type="text" name="txtCaptcha">
+
+                <img style="height:35px;margin-left:10px;width:120px" src="http://chuyenhangnga.com/action/random_image.php">
+            </p>
+            <br>
+            <p>
+                <input class="button_login" style="height:40px;background:#bd2b0a;margin-left:200px;color:#fff;border:none;width:150px;border-radius:3px" type="submit" value="Mua hàng">
+            </p>
+        </div>
+    </form>
+</div>
+<style>
+    .cart_title {
+        overflow: hidden;
+    }
+
+        .cart_title h1 {
+            font-size: 26px;
+        }
+
+    table.product_pay tr {
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+        table.product_pay tr:first-child {
+            border: none;
+        }
+
+        table.product_pay tr:last-child {
+            background: #f8f9fb;
+            height: 70px;
+        }
+
+        table.product_pay tr td img {
+            padding: 10px 10px 10px 0px;
+            height: 120px;
+            width: 180px;
+        }
+
+        table.product_pay tr th {
+            font-weight: normal;
+            padding-left: 10px;
+        }
+
+        table.product_pay tr td {
+            padding-left: 10px;
+        }
+
+            table.product_pay tr td img.icon_del {
+                width: 20px;
+                height: 20px;
+                padding: 0px;
+            }
+
+    .cart-pay h2 {
+        height: 40px;
+        line-height: 40px;
+        border-top: 1px solid #ddd;
+        background: #f8f9fb;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    .cart-pay .form_cart_pay p {
+        padding-left: 20px;
+        width: 100%;
+        display: block;
+        height: 35px;
+        margin-top: 10px;
+    }
+
+        .cart-pay .form_cart_pay p label {
+            width: 200px;
+            float: left;
+            line-height: 35px;
+        }
+
+        .cart-pay .form_cart_pay p input {
+            width: 400px;
+            float: left;
+            height: 35px;
+        }
+</style>
+    <script>
+            var isclick = true;
+           $('.btnshowcat').click(function(){
+               if(isclick == true)
+               {
+                   $('.listcategory').slideDown();
+                   isclick = false;
+               }
+               else
+               {
+                   $('.listcategory').slideUp();
+                   isclick = true;
+               }
+           });
+          var nav = $('.menu_fix');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 136) {
+                    nav.addClass("nav_menutop");
+                    $('#wrapper .content .content_1 .category .listcategory').slideUp();
+                    isclick = true;
+
+                } else {
+                    nav.removeClass("nav_menutop");
+                }
+            });
+    </script>
+

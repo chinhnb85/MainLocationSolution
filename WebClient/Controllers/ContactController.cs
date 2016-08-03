@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace WebClient.Controllers
 {
-    public class DetailController : Controller
+    public class ContactController : Controller
     {
-        // GET: Detail
+        // GET: Contact
         public ActionResult Index()
         {
             return View();

@@ -4,9 +4,7 @@
 
 <div class="list_product">
     <div class="title">
-
         <h3>SẢN PHẨM CHO BÉ</h3>
-
     </div>
     <div class="list_content">
         <ul class="list">
@@ -409,48 +407,46 @@
     }
 </style>
 <script>
-            var isclick = false;
-            $('#wrapper').on('click','.btnshowcat',function(){
+    var isclick = false;
+    $('#wrapper').on('click', '.btnshowcat', function () {
 
-               if(isclick == true)
-               {
-                   $('.listcategory').slideDown();
-                   isclick = false;
-               }
-               else
-               {
-                   $('.listcategory').slideUp();
-                   isclick = true;
-               }
-           });
+        if (isclick == true) {
+            $('.listcategory').slideDown();
+            isclick = false;
+        }
+        else {
+            $('.listcategory').slideUp();
+            isclick = true;
+        }
+    });
 
-            var nav = $('.menu_fix');
+    var nav = $('.menu_fix');
 
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 136) {
-                    nav.addClass("nav_menutop");
-                    $('#wrapper .content .content_1 .category .listcategory').slideUp();
-                    $('#wrapper .content .content_1 .category .nav_menu_cat').css('position','initial');
-                    isclick = true;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 136) {
+            nav.addClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .listcategory').slideUp();
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'initial');
+            isclick = true;
 
-                } else {
-                    nav.removeClass("nav_menutop");
-                    $('#wrapper .content .content_1 .category .listcategory').slideDown();
-                    $('#wrapper .content .content_1 .category .nav_menu_cat').css('position','absolute');
-                    isclick = false;
-                }
-            });
+        } else {
+            nav.removeClass("nav_menutop");
+            $('#wrapper .content .content_1 .category .listcategory').slideDown();
+            $('#wrapper .content .content_1 .category .nav_menu_cat').css('position', 'absolute');
+            isclick = false;
+        }
+    });
 </script>
 <script type="text/javascript">
-            $(document).ready(function() {
-                $('.bxslider').bxSlider({
-//                            pagerCustom: '#bx-pager',
-                    responsive: true,
-//                            adaptiveHeight: true,
-                    pager: false,
-                    auto: true
-                });
-            });
+    $(document).ready(function () {
+        $('.bxslider').bxSlider({
+            //                            pagerCustom: '#bx-pager',
+            responsive: true,
+            //                            adaptiveHeight: true,
+            pager: false,
+            auto: true
+        });
+    });
 </script>
 <style>
     #bx-pager img {
