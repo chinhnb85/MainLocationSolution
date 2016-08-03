@@ -134,3 +134,11 @@ function getAllUser() {
         });
     });
 }
+
+function logout() {
+    $('#btnThoat').off('click').on('click', function () {
+        $.get("/Login/Logout", function (data) {
+            
+        });
+    });
+}

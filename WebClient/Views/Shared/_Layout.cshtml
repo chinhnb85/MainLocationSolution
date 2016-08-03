@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=100%, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>@ViewBag.Title</title>
+    <meta name="Description" content="Mỹ phẩm; Sữa bột ; Sữa Nan Nga; Bột ăn dặm; Thực phẩm; Đồ ăn;">
+    <meta name="Keywords" content="Mỹ phẩm; Sữa bột ; Sữa Nan Nga; Bột ăn dặm; Thực phẩm; Đồ ăn;">    
+    <meta name="author" content="chinhnb">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">    
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Assets/Css")       
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")     
+    @Scripts.Render("~/bundles/modernizr")     
+    
+</head>
+<body>
+    <div id="wrapper">
+        <div class="header1">
+            <!-- End Top-->
+            <div class="menu">
+                <div class="content_menu">
+                    <div class="top">
+                        <a href="https://www.facebook.com/chuyenhangngacom/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-youtube-square"></i></a>
+                        <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                    </div>
+                    <button class="btnMenuMobile">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="nav_menu">
+                        <li><a href="/">Trang chủ</a></li>
+                        <li class=""><a href="/gioi-thieu">Giới thiệu</a></li>
+                        <li class=""><a href="/bai-viet">Bài viết</a></li>
+                        <li class=""><a href="/bi-quyet-khoe-dep">Bí quyết khoẻ đẹp</a></li>
+                        <li class=""><a href="/nuoi-day-con">Nuôi dạy con</a></li>
+                        <li class=""><a href="/ban-do">Bản đồ</a></li>
+                        <li class=""><a href="/huong-dan-mua-hang">Hướng dẫn mua hàng</a></li>
+                        <li class=""><a href="/lien-he">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Top-->
+        </div>
+        <div class="banner">
+            <div class="content_banner">
+                <a href="/"><img src="/Assets/Images/logo.png"></a>
+                <div class="form_search">
+                    <form action="/tim-kiem-san-pham.html" method="get" name="frm-quick-search">
+                        <input class="text_search" name="keyword" placeholder="Tìm kiếm">
+                        <button class="btnsearch" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+
+                </div>
+                <div class="header-top">
+                    <div class="top-left">
+                        <i style="color:#0089b6;margin-right:5px;font-size:20px" class="fa fa-map-marker"></i><span>Số 307 Trương Định, Hoàng Mai, Hà Nội. Mở cửa tất cả các ngày trong tuần</span><i style="color:red;margin-left:30px;margin-right:5px;font-size:20px" class="fa fa-phone"></i> <span>Hotline : 0979 400 888.</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content_1 menu_fix">
+                <div class="category">
+                    <div class="title">
+                        <a class="btnshowcat">
+                            <h3>Danh mục sản phẩm</h3>
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div class="nav_menu_cat" style="position: absolute;">
+                        <ul class="listcategory" style="overflow: hidden; display: block;">
+
+                            <li>
+                                <i class="fa fa-stop"></i><a href="/san-pham-cho-be">SẢN PHẨM CHO BÉ</a>
+                                <ul class="submenu">
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/sua-bot">Sữa bột</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/sua-nuoc-">Sữa nước </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/do-an-dam-">Đồ ăn dặm </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/vang-sua---sua-chua-">Váng sữa - Sữa chua </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/phomai---trung-ca-hoi-">Phomai - Trứng cá hồi </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/dau-an-">Dầu ăn </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/my-pham-cho-be-">Mỹ phẩm cho bé </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/sua-bau-cho-me-">Sữa bầu cho mẹ </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i class="fa fa-stop"></i><a href="/my-pham-organic-">MỸ PHẨM ORGANIC </a>
+                                <ul class="submenu">
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/natura--siberica">Natura  Siberica</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/planeta-organica">Planeta Organica</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/organic-shop">Organic Shop</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/teana">Teana</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i class="fa fa-stop"></i><a href="/my-pham-pho-thong">MỸ PHẨM PHỔ THÔNG</a>
+                                <ul class="submenu">
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/nuoc-hoa-hong---tonic">Nước hoa hồng - Tonic</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/san-pham-matxa-giam-beo--ran-da-">Sản phẩm matxa giảm béo , rạn da </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/sonphando-make-up-">Son,Phấn,Đồ Make up </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/hang-huu-ich-">Hàng hữu ích </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/kem-va-serum-vung-mat-">Kem và Serum vùng mắt </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/cham-soc-rang-mieng">CHĂM SÓC RĂNG MIỆNG</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/mat-na">Mặt Nạ</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/kem-duong-da-mat-">Kem dưỡng da mặt </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/dau-goi-dau">Dầu gội đầu</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/kem-duong-tay-chan-">Kem dưỡng tay chân </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/cham-soc-toc">Chăm Sóc Tóc</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/kem-chong-nang---kem-tay-long">Kem chống nắng - Kem tẩy lông</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/kem-nen---kem-trang-diem-">Kem nền - kem trang điểm </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/kem-duong-da-">kem dưỡng da </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/sua-rua-mat---tay-trang-">Sữa rửa mặt - Tẩy trang </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/tri-mun-trung-ca">Trị Mụn Trứng Cá</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/tay-da-chet">Tẩy da chết</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/san-pham-khu-mui-">Sản phẩm khử mùi </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i class="fa fa-stop"></i><a href="/thuc-pham---banh-keo---ruou">Thực phẩm - Bánh kẹo - Rượu</a>
+                                <ul class="submenu">
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/banh-keo-">Bánh Kẹo </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/cac-loai-hat-">Các loại hạt </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/ruou---bia-nga">Rượu - Bia Nga</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/gia-vi-nga">Gia Vị Nga</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/nuoc-ep-hoa-qua-">Nước Ép Hoa Quả </a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/hoa-qua">Hoa quả</a></li>
+
+                                    <li><i class="fa fa-arrow-right"></i> <a href="/thuc-pham-">Thực phẩm </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i class="fa fa-stop"></i><a href="/thuoc-bo-cho-gia-dinh">Thuốc bổ cho gia đình</a>
+                                <ul class="submenu" style="position: initial;display:none !important"></ul>
+                            </li>
+                            <li>
+                                <i class="fa fa-stop"></i><a href="/hang-thoi-trang---gia-dung">Hàng Thời Trang - Gia Dụng</a>
+                                <ul class="submenu" style="position: initial;display:none !important"></ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="slide">
+                    <div class="vanchuyen">
+                        <a href="#"><img src="/Assets/Images/bn.png"></a>
+                    </div>
+                    <div class="title">
+                        <a class="btncart" href="/gio-hang">Thanh toán</a>
+                        <div class="showcart">
+                            <a href="/gio-hang">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="text">Giỏ hàng</span>
+                            </a>
+                            <span class="number cart">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_1">
+                <div class="slide_content">
+                    <div class="slide-maint">
+                        <div>
+                            <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
+                                <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 391px;">
+                                    <ul class="bxslider" style="width: 415%; position: relative; transition-duration: 0s; transform: translate3d(-940px, 0px, 0px);">
+                                        <li style="float: left; list-style: none; position: relative; width: 940px;" class="bx-clone"><a href="/natura--siberica" title="Natura Siberica"><img src="/Assets/Images/sp/1464763675_natura_siberica_banner.png"></a></li>
+                                        <li style="float: left; list-style: none; position: relative; width: 940px;"><a href="/fructo-nyanya-n12.html" title="Fructo Nyanya"><img src="/Assets/Images/sp/1460619198_fructo_nyanya_slider.jpg"></a></li>
+
+                                        <li style="float: left; list-style: none; position: relative; width: 940px;"><a href="/natura--siberica" title="Natura Siberica"><img src="/Assets/Images/sp/1464763675_natura_siberica_banner.png"></a></li>
+                                        <li style="float: left; list-style: none; position: relative; width: 940px;" class="bx-clone"><a href="/fructo-nyanya-n12.html" title="Fructo Nyanya"><img src="/Assets/Images/sp/1460619198_fructo_nyanya_slider.jpg"></a></li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_2">
+                <div class="left">                                        
+                    @RenderBody()                    
+                </div>
+                <div class="right">
+                    <div class="product_run">
+                        <div class="title">
+                            <h3>Sản phẩm nổi bật</h3>
+                        </div>
+                        <div class="content">
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/-mat-na-toc-phuc-hoi-chuyen-sau-cho-toc-chac-khoe-va-ngan-ngua-toc-rung-%D0%A7%D0%98%D0%A1%D0%A2%D0%90%D0%AF-%D0%9B%D0%98%D0%9D%D0%98%D0%AF.html" title=" Mặt nạ tóc phục hồi chuyên sâu cho tóc chắc khỏe và ngăn ngừa tóc rụng ЧИСТАЯ ЛИНИЯ">
+                                        <img src="/Assets/Images/sp/1416312702_mntoccleanlinevang.jpg" alt=" Mặt nạ tóc phục hồi chuyên sâu cho tóc chắc khỏe và ngăn ngừa tóc rụng ЧИСТАЯ ЛИНИЯ">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/-mat-na-toc-phuc-hoi-chuyen-sau-cho-toc-chac-khoe-va-ngan-ngua-toc-rung-%D0%A7%D0%98%D0%A1%D0%A2%D0%90%D0%AF-%D0%9B%D0%98%D0%9D%D0%98%D0%AF.html" title=" Mặt nạ tóc phục hồi chuyên sâu cho tóc chắc khỏe và ngăn ngừa tóc rụng ЧИСТАЯ ЛИНИЯ"> Mặt nạ tóc phục hồi chuyên sâu cho tóc ...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">160,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/Chao-sua-dem-Fleur-A;pine-Organic-.html" title="Cháo sữa ăn đêm Fleur Alpine Organic ">
+                                        <img src="/Assets/Images/sp/1468231782_Cháo_sữa_ăn_đêm_Fleur_Alpine_Organic.jpg" alt="Cháo sữa ăn đêm Fleur Alpine Organic ">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/Chao-sua-dem-Fleur-A;pine-Organic-.html" title="Cháo sữa ăn đêm Fleur Alpine Organic ">Cháo sữa ăn đêm Fleur Alpine Organic ...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">145,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/kem-duong-ngay-natura-siberica-.html" title="Kem dưỡng ngày Natura Siberica ">
+                                        <img src="/Assets/Images/sp/1462509125_Kem_dưỡng_ngày_Natura_Siberica.jpg" alt="Kem dưỡng ngày Natura Siberica ">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/kem-duong-ngay-natura-siberica-.html" title="Kem dưỡng ngày Natura Siberica ">Kem dưỡng ngày Natura Siberica ...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">230,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/kem-duong-da-tay-organic-shop-aloe-&amp;-beewax.html" title="Kem dưỡng da tay Organic Shop Aloe &amp; Beewax">
+                                        <img src="/Assets/Images/sp/1409298205_kemtayorganicshop-aloe.jpg" alt="Kem dưỡng da tay Organic Shop Aloe &amp; Beewax">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/kem-duong-da-tay-organic-shop-aloe-&amp;-beewax.html" title="Kem dưỡng da tay Organic Shop Aloe &amp; Beewax">Kem dưỡng da tay Organic Shop Aloe &amp; Bee...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">115,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/%D0%91%D0%B0%D0%BB%D0%B5%D1%82---ballet-2000-.html" title="Kem nền Bavet 2000 (40g)">
+                                        <img src="/Assets/Images/sp/1410265934_ballet2000.jpg" alt="Kem nền Bavet 2000 (40g)">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/%D0%91%D0%B0%D0%BB%D0%B5%D1%82---ballet-2000-.html" title="Kem nền Bavet 2000 (40g)">Kem nền Bavet 2000 (40g)...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">100,000 đ</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End product hight-->
+                    <div class="product_run">
+                        <div class="title1">
+                            <h3>Sản phẩm Mới</h3>
+                        </div>
+                        <div class="content">
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/nuoc-hoa-hong-lam-sach-sau-cho-da-dau-natura-siberica-.html" title="Nước hoa hồng làm sạch sâu cho da dầu Natura Siberica">
+                                        <img src="/Assets/Images/sp/1469589517_nước-hoa-hồng-cho-da-dầu-Siberica-600x600.jpg" alt="Nước hoa hồng làm sạch sâu cho da dầu Natura Siberica">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/nuoc-hoa-hong-lam-sach-sau-cho-da-dau-natura-siberica-.html" title="Nước hoa hồng làm sạch sâu cho da dầu Natura Siberica">Nước hoa hồng làm sạch sâu cho da dầu Na...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">250,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/gel-rua-mat-pure-line-chiet-xuat-thao-duoc-cay-hoang-lien-hieu-.html" title="Gel rửa mặt Pure line chiết xuất thảo dược cây Hoàng Liên Hiêu">
+                                        <img src="/Assets/Images/sp/1469541197_13664715_1750875441851001_2064171660_n.jpg" alt="Gel rửa mặt Pure line chiết xuất thảo dược cây Hoàng Liên Hiêu">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/gel-rua-mat-pure-line-chiet-xuat-thao-duoc-cay-hoang-lien-hieu-.html" title="Gel rửa mặt Pure line chiết xuất thảo dược cây Hoàng Liên Hiêu">Gel rửa mặt Pure line chiết xuất thảo dư...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">85,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/gel-rua-mat-pure-line-lam-sach-sau-.html" title="Gel rửa mặt PURE LINE làm sạch sâu">
+                                        <img src="/Assets/Images/sp/1469512144_13820319_1750876108517601_1816939926_n.jpg" alt="Gel rửa mặt PURE LINE làm sạch sâu">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/gel-rua-mat-pure-line-lam-sach-sau-.html" title="Gel rửa mặt PURE LINE làm sạch sâu">Gel rửa mặt PURE LINE làm sạch sâu...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">85,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/Chao-sua-dem-Fleur-A;pine-Organic-.html" title="Cháo sữa ăn đêm Fleur Alpine Organic ">
+                                        <img src="/Assets/Images/sp/1468231782_Cháo_sữa_ăn_đêm_Fleur_Alpine_Organic.jpg" alt="Cháo sữa ăn đêm Fleur Alpine Organic ">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/Chao-sua-dem-Fleur-A;pine-Organic-.html" title="Cháo sữa ăn đêm Fleur Alpine Organic ">Cháo sữa ăn đêm Fleur Alpine Organic ...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">145,000 đ</p>
+                                </li>
+                            </ul>
+
+                            <ul class="listproduct">
+                                <li class="image">
+                                    <a href="/banh-an-dam-Fleur-Alpine-Organic-loai-Alpine-Prebiotic-.html" title="Bánh ăn dặm Fleur Alpine Organic loại Alpine Prebiotic">
+                                        <img src="/Assets/Images/sp/1468231227_Bánh_ăn_dặm_Fleur_Alpine_Organic_loại_Alpine_Prebiotic.jpg" alt="Bánh ăn dặm Fleur Alpine Organic loại Alpine Prebiotic">
+                                    </a>
+                                </li>
+                                <li class="description">
+                                    <h3><a href="/banh-an-dam-Fleur-Alpine-Organic-loai-Alpine-Prebiotic-.html" title="Bánh ăn dặm Fleur Alpine Organic loại Alpine Prebiotic">Bánh ăn dặm Fleur Alpine Organic loại Al...</a></h3>
+                                    <p class="star"> <img src="/Assets/Images/star.png" alt="star"></p>
+                                    <p class="price">135,000 đ</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End product hight-->
+                    <div class="product_run">
+                        <div class="title" style="background:#4e69a2">
+                            <h3>Fanpage Facebook</h3>
+                        </div>
+                        <div class="content">
+                            <iframe src="/Assets/Images/sp/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:240px;" allowtransparency="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show_news_th">
+                <div class="show_news">
+                    <div class="title">
+                        Bài viết
+                    </div>
+                    <div class="content_news">
+                        <div class="news_1">
+                            <div class="image_news">
+                                <a href="#">	<img src="/Assets/Images/sp/1467085176_àd.jpg" alt="Mẹ tập cho bé ăn dặm đúng cách"></a>
+                            </div>
+                            <div class="description_news">
+                                <h3><a href="/me-tap-cho-be-an-dam-dung-cach-n56.html">Mẹ tập cho bé ăn dặm đúng cách</a></h3>
+
+                                <p class="description">Ở giai đoạn 6 tháng, cơ thể bé đã sẵn sàng cho việc đón nhận dinh dưỡng từ các t...</p>
+                            </div>
+                        </div>
+                        <div class="news_2">
+                            <li>
+                                <a href="/bup-be-matryoshka---bieu-tuong-van-hoa-nuoc-nga-n17.html"><i class="fa fa-angle-double-right"></i> Búp bê Matryoshka - Biểu tượng văn hóa nước Nga</a>
+                            </li>
+
+                            <li>
+                                <a href="/banh-mi-den-va-trung-ca-muoi-caviar---mon-an-duoc-yeu-thich-nhat-tai-nga-n15.html"><i class="fa fa-angle-double-right"></i> Bánh Mì Đen Và Trứng Cá Muối Caviar - Món ăn được yêu thích nhất tại Nga</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="show_th">
+                    <div class="title">
+                        Thương hiệu - Hãng sản xuất
+                    </div>
+                    <div class="content_th">
+                        <div class="show_conent_1">
+                            <a href="/natura-siberica-n14.html"><img src="/Assets/Images/sp/1464837354_naturasiberica_logo-main.png" alt="Natura Siberica" title="Natura Siberica"></a>
+                        </div>
+
+                        <div class="show_conent_1">
+                            <a href="/nestle-n13.html"><img src="/Assets/Images/sp/1460619399_LOGO_NESTLE_Corpo.png" alt="Nestle" title="Nestle"></a>
+                        </div>
+
+                        <div class="show_conent_1">
+                            <a href="/fructo-nyanya-n12.html"><img src="/Assets/Images/sp/1460358762_fructonyaya.jpg" alt="Fructo NyaNya" title="Fructo NyaNya"></a>
+                        </div>
+
+                        <div class="show_conent_1">
+                            <a href="/agusha-n10.html"><img src="/Assets/Images/sp/1457065674_logoagusha.png" alt="AGUSHA" title="AGUSHA"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer1">
+                <div class="list4">
+                    <h3>Babysmileplaza Shop</h3>
+                    <p><i class="fa fa-map-marker"></i> Số 307 Trương Định, Hoàng Mai, Hà Nội</p>
+                    <p><i class="fa fa-phone" style="padding-left:7px;"></i> Tel:0912.899.747 </p>
+                    <p><i class="fa fa-envelope" style="padding-left:4px;padding-top:3px;"></i> Email: <a href="mailto:lienhe@babysmileplaza.com"> lienhe@babysmileplaza.com</a></p>
+                </div>
+
+
+                <div class="list3">
+                    <h3>Lưu ý người dùng</h3>
+                    <ul>
+                        <a href="/quy-dinh-va-hinh-thuc-thanh-toan" title="Quy định và hình thức thanh toán">Quy định và hình thức thanh toán.</a>
+                        <a href="/phuong-thuc-giao-hang-va-phi-van-chuyen" title="Phương thức giao hàng và phí vận chuyển">Phương thức giao hàng và phí vận chuyển.</a>
+                        <a href="/chinh-sach-bao-hanh" title="Chính sách bảo hành">Chính sách bảo hành.</a>
+                        <a href="/chinh-sach-doi-tra-hang" title="Chính sách đổi, trả hàng">Chính sách đổi, trả hàng</a>
+                        <a href="/quy-dinh-quan-ly-thong-tin-ca-nhan" title="Quy định quản lý thông tin cá nhân">Quy định quản lý thông tin cá nhân</a>
+                    </ul>
+
+                </div>
+                <div class="list1">
+                    <h3>Đã đăng ký Bộ Công Thương</h3>
+                    <p>
+                        Giấy chứng nhận đăng ký hộ kinh doanh số: 01E8018114 do UBND quận Hoàng Mai cấp ngày 21/10/2016.
+                    </p>
+                    <p>
+                        Chịu trách nhiệm nội dung: Babysmileplaza.com.
+
+                    </p>
+                    <p>
+                        Địa chỉ: 307 Trương Định, Hoàng Mai, Hà Nội.
+                    </p>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="menu_footer">
+                    <ul>
+                        <a href="/">Trang chủ</a>
+                        <a href="/gioi-thieu">Giới thiệu</a>
+                        <a href="/bai-viet">Bài viết</a>
+                        <a href="/bi-quyet-khoe-dep">Bí quyết khoẻ đẹp</a>
+                        <a href="/nuoi-day-con">Nuôi dạy con</a>
+                        <a href="/ban-do">Bản đồ</a>
+                        <a href="/huong-dan-mua-hang">Hướng dẫn mua hàng</a>
+                        <a href="/lien-he">Liên hệ</a>
+                    </ul>
+                    <p>Copyright 2016 by babysmileplaza.com.All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        <!-- End footer-->
+    </div>
+
+    <div id="mystickytooltip" class="stickytooltip" style="display: none; border-color: black;">
+        <div style="padding:5px">
+            <div id="sticky644" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1468231782_Cháo_sữa_ăn_đêm_Fleur_Alpine_Organic.jpg" title="Cháo sữa ăn đêm Fleur Alpine Organic " alt="Cháo sữa ăn đêm Fleur Alpine Organic ">
+            </div>
+
+            <div id="sticky643" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1468231227_Bánh_ăn_dặm_Fleur_Alpine_Organic_loại_Alpine_Prebiotic.jpg" title="Bánh ăn dặm Fleur Alpine Organic loại Alpine Prebiotic" alt="Bánh ăn dặm Fleur Alpine Organic loại Alpine Prebiotic">
+            </div>
+
+            <div id="sticky642" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1468230903_Bánh_bích_quy_Fleur_Alpine_với_táo.jpg" title="Bánh bích quy Fleur Alpine với táo" alt="Bánh bích quy Fleur Alpine với táo">
+            </div>
+
+            <div id="sticky641" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1468230289_Súp_rau_củ_tổng_hợp_Fleur_Alpine.jpg" title="Bột Fleur Alpine rau củ tổng hợp" alt="Bột Fleur Alpine rau củ tổng hợp">
+            </div>
+
+            <div id="sticky558" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1463305535_Ice_gel_sau_khi_cạo_râu_Natura_Siberica.jpg" title="Sữa rửa mặt Natura Siberica dành cho nam" alt="Sữa rửa mặt Natura Siberica dành cho nam">
+            </div>
+
+            <div id="sticky547" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1463031566_Sữa_rửa_mặt_tẩy_trang_Natura_Siberica_dành_cho_da_hỗn_hợp.jpg" title=" Sữa rửa mặt tẩy trang Natura Siberica dành cho da hỗn hợp " alt=" Sữa rửa mặt tẩy trang Natura Siberica dành cho da hỗn hợp ">
+            </div>
+
+            <div id="sticky522" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1461826478_Kem_chăm_sóc_da_ban_ngày_Natura_Siberica_cho_da_nhờn_và_da_hỗn_hợp..jpg" title="Kem chăm sóc da ban ngày Natura Siberica cho da nhờn và da hỗn hợp." alt="Kem chăm sóc da ban ngày Natura Siberica cho da nhờn và da hỗn hợp.">
+            </div>
+
+            <div id="sticky521" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1461825669_Kem_dưỡng_ban_ngày_Natura_Siberica__cho_da_khô.jpg" title="Kem dưỡng ban ngày Natura Siberica  cho da khô" alt="Kem dưỡng ban ngày Natura Siberica  cho da khô">
+            </div>
+
+            <div id="sticky645" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1469512144_13820319_1750876108517601_1816939926_n.jpg" title="Gel rửa mặt PURE LINE làm sạch sâu" alt="Gel rửa mặt PURE LINE làm sạch sâu">
+            </div>
+
+            <div id="sticky574" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1465117339_13392951_1729935547278324_274301375_n.jpg" title="Son Tomford" alt="Son Tomford">
+            </div>
+
+            <div id="sticky570" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1464775650_Xịt_khử_mùi_hôi_chân_Rexona_3_in_1_của_Nga.jpg" title="Xịt chân 24h Rexona 3 in 1 - 150ml" alt="Xịt chân 24h Rexona 3 in 1 - 150ml">
+            </div>
+
+            <div id="sticky569" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1464342429_Sữa_tắm_dạng_gel_VITA_&amp;_MILK_với_sữa_và_dâu_tây_350ml.jpg" title="Sữa tắm VITA MILK dâu tây " alt="Sữa tắm VITA MILK dâu tây ">
+            </div>
+
+            <div id="sticky636" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1466661134_Quả_đào_dẹt.jpg" title="Quả đào dẹt" alt="Quả đào dẹt">
+            </div>
+
+            <div id="sticky635" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1466658567_Quả_cherry.jpg" title="Quả cherry" alt="Quả cherry">
+            </div>
+
+            <div id="sticky632" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1466588127_Mỡ_muối_rắc_tiêu_đen_Nga.jpg" title="Mỡ muối rắc tiêu đen Nga" alt="Mỡ muối rắc tiêu đen Nga">
+            </div>
+
+            <div id="sticky631" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1466590305_Xúc_xích_SALAMI_Nga.jpg" title="Salami 270g" alt="Salami 270g">
+            </div>
+
+            <div id="sticky431" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1463814501_Canxi_Kid_và_Multivitamin_cho_trẻ_từ_2_đến_7_tuổi.jpg" title="Canxi Kid và Multivitamin cho trẻ từ 2 đến 7 tuổi " alt="Canxi Kid và Multivitamin cho trẻ từ 2 đến 7 tuổi ">
+            </div>
+
+            <div id="sticky417" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1463814635_MultiTab_vitamin_và_khoáng_chất_cho_trẻ_từ_1_đến_4_tuổi_60v.jpg" title="MultiTab vitamin và khoáng chất cho trẻ từ 1 đến 4 tuổi 60v " alt="MultiTab vitamin và khoáng chất cho trẻ từ 1 đến 4 tuổi 60v ">
+            </div>
+
+            <div id="sticky406" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1463814987_Elevit_Vitamin_tổng_hợp_cho_phụ_nữ_mang_thai_30v.jpg" title="Elevit Vitamin tổng hợp cho phụ nữ mang thai 30v " alt="Elevit Vitamin tổng hợp cho phụ nữ mang thai 30v ">
+            </div>
+
+            <div id="sticky405" class="atip">
+                <img width="400" height="520" src="./Chuyên Hàng Nga_files/1463815268_MultiTab_4-11_tuổi_hộp_60v.jpg" title="MultiTab 4-11 tuổi hộp 60v " alt="MultiTab 4-11 tuổi hộp 60v ">
+            </div>
+        </div>
+
+    </div>         
+
+    <script src="/Assets/Js/tweenmax.min.js"></script>
+    <script src="/Assets/Js/scroll.min.js"></script>
+
+    <script>
+        $(function(){
+            var $window = $(window);
+            var scrollTime = 0.4;
+            var scrollDistance = 170;
+
+            $window.on("mousewheel DOMMouseScroll", function(event){
+
+            event.preventDefault();
+
+            var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+            var scrollTop = $window.scrollTop();
+            var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+            TweenMax.to($window, scrollTime, {
+            scrollTo : { y: finalScroll, autoKill:true },
+            ease: Power1.easeOut,
+            overwrite: 5
+            });
+
+            });
+        });
+
+        $(".ajax").click(function (e) {
+
+            e.preventDefault();
+
+            alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
+
+            var item = $(this).attr('data-product');
+
+            $('.cart').load('/action/cart_product.php?item=' + item);
+
+            $('body,html').animate({ scrollTop: 0 }, 800);
+
+        });
+
+        var ismobile = true;
+        $('.btnMenuMobile').click(function () {
+            if (ismobile == true) {
+                $('#wrapper .header1 .menu .content_menu ul.nav_menu').slideDown();
+                ismobile = false;
+            }
+            else {
+                $('#wrapper .header1 .menu .content_menu ul.nav_menu').slideUp();
+                ismobile = true;
+            }
+        });
+
+    </script> 
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

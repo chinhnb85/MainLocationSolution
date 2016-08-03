@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "Code\Dapper\Dappe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibCore", "Code\LibCore\LibCore.csproj", "{435C7DFE-B276-4654-8018-FFE7B40DDB73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{F57C21BB-1AA4-4615-B432-93F0B841CFE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{435C7DFE-B276-4654-8018-FFE7B40DDB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{435C7DFE-B276-4654-8018-FFE7B40DDB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{435C7DFE-B276-4654-8018-FFE7B40DDB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57C21BB-1AA4-4615-B432-93F0B841CFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57C21BB-1AA4-4615-B432-93F0B841CFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57C21BB-1AA4-4615-B432-93F0B841CFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57C21BB-1AA4-4615-B432-93F0B841CFE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

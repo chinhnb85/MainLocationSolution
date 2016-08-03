@@ -3,6 +3,12 @@
     $('#btnLogin').off('click').on('click', function() {
         login();
     });
+
+    $("#btnLogin").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $("#btnLogin").click();
+        }
+    });
     
 });
 

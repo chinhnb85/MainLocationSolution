@@ -1,0 +1,511 @@
+﻿@{
+    ViewBag.Title = "Mỹ phẩm; Sữa bột ; Sữa Nan Nga; Bột ăn dặm; Thực phẩm; Đồ ăn";
+}
+
+<script src="/Assets/Js/Zoom/jquery.elevateZoom-2.5.5.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+	$(".ajax").click(function(){
+		alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
+		var item = $(this).attr('title');
+		$('.cart').load('/action/cart_product.php?item='+item);
+                $('body,html').animate({scrollTop:0},800);
+	});
+	$(".btn-buy-p").click(function(){
+		alert("Bạn đã thêm sản phẩm vào giỏ hàng thành công");
+		var item = $('.btn-buy-p .ajax1').attr('title');
+		var cart_get = $('input.numberproduct').val();
+		$('.cart').load('/action/cart_product.php?item='+item+'&cart_get='+cart_get);
+                $('body,html').animate({scrollTop:0},800);
+	});
+	$('.layout_list ul li img').click(function(){
+		var small=$(this).attr('src');
+		var large=$(this).attr('rel');
+		$('#zoom_01').attr('src',small);
+		$('.zoomWindowContainer .zoomWindow').css({'background-image':'url("'+large+'")'});
+	});
+});
+
+</script>
+<div class="detail_header">
+    <h1>Sữa dê Mamako 3</h1>
+    <div class="summany">
+        <div class="thuoc_cat">
+            <span>Danh mục sản phẩm: <a href="/sua-bot" title="Sữa bột">Sữa bột</a> | Lượt xem: 142</span>
+        </div>
+        <div class="share" style="float:right;text-align: right;">
+            <div class="fb-share-button fb_iframe_widget" data-href="/Sua-de-mamako-3-.html" data-layout="button_count" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=560996333936662&amp;container_width=368&amp;href=http%3A%2F%2Fchuyenhangnga.com%2FSua-de-mamako-3-.html&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey"><span style="vertical-align: bottom; width: 77px; height: 20px;"><iframe name="f19307cfae7408" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="/Assets/Js/Zoom/share_button.html" style="border: none; visibility: visible; width: 77px; height: 20px;" class=""></iframe></span></div>
+
+            <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1470207794866" name="I0_1470207794866" src="/Assets/Js/Zoom/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+        </div>
+    </div>
+</div>
+<div class="detail_content">
+    <div class="left_detail">
+        <div class="image gallery" id="Gallery">
+            <img src="/Assets/Js/Zoom/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg" id="zoom_01" alt="Sữa dê Mamako 3" data-zoom-image="/media/product/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg" rel="/media/product/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg">
+        </div>
+    </div>
+    <div class="right_detail">
+        <div class="description">
+
+        </div>
+        <div class="infomation">
+            <p class="price">320,000 đ VNĐ</p>
+            <table border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td width="30%">Xuất xứ</td>
+                        <td width="70%">Nga</td>
+                    </tr>
+                    <tr>
+                        <td width="30%">Tình trạng</td>
+                        <td width="70%"><span style="color:#5eab25">Còn hàng</span></td>
+                    </tr>
+                    <tr>
+                        <td width="30%">Khối lượng</td>
+                        <td width="70%">400 g</td>
+                    </tr>
+                    <tr>
+                        <td width="30%">Hãng sản xuất</td>
+                        <td width="70%">Mamako</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="addtocart">
+            <label>Số lượng</label>
+            <input class="numberproduct" value="1" name="ten" type="number">
+            <button class="addcart btn btn-buy-p"> <div class="ajax1" title="578">Mua hàng</div></button>
+        </div>
+        <div class="hotline_detail">
+            <p class="hotline"><i class="fa fa-phone-square"></i> Hotline: 0912 899 747</p>
+            <p><i class="fa fa-map-marker"></i> Địa chỉ: Số 282 Đường Láng - Đống Đa - Hà Nội</p>
+        </div>
+    </div>
+</div>
+<div class="detail_content_1">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="/Sua-de-mamako-3-.html#home" aria-controls="home" role="tab" data-toggle="tab">CHI TIẾT SẢN PHẨM</a></li>
+        <li role="presentation"><a href="/Sua-de-mamako-3-.html#profile" aria-controls="profile" role="tab" data-toggle="tab">ĐÁNH GIÁ</a></li>
+        <li role="presentation"><a href="/Sua-de-mamako-3-.html#messages" aria-controls="messages" role="tab" data-toggle="tab">HỎI ĐÁP</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+           <p>Chi tiết sản phẩm</p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <p>Đánh giá</p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+            <p>Hỏi đáp</p>
+        </div>
+    </div>
+</div>
+<div class="list_product" style="margin-top:30px;">
+    <div class="title">
+        <h3>Sản phẩm cùng loại khác</h3>
+    </div>
+    <div class="product_other list_content">
+        <div class="bx-wrapper" style="max-width: 920px;">
+            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 335px;">
+                <ul class="bxslider list" style="width: 1415%; position: relative; transition-duration: 0s; transform: translate3d(-940px, 0px, 0px);">
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/-sua-nutrilon-premium-nga-so-3-hop.html" title=" Sữa NUTRILON Premium Nga số 3 ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460790343_3.jpg" title=" Sữa NUTRILON Premium Nga số 3 " data-tooltip="sticky440" alt=" Sữa NUTRILON Premium Nga số 3 ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-nutrilon-premium-nga-so-3-hop.html"> Sữa NUTRILON Premium Nga số 3 ...</a></h3>
+                            <div class="price">
+                                <span>530,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="440">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/-sua-nutrilon-premium-nga-so-2-hop-800g-.html" title=" Sữa NUTRILON Premium Nga số 2 hộp 800g ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460790941_2.jpg" title=" Sữa NUTRILON Premium Nga số 2 hộp 800g " data-tooltip="sticky439" alt=" Sữa NUTRILON Premium Nga số 2 hộp 800g ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-nutrilon-premium-nga-so-2-hop-800g-.html"> Sữa NUTRILON Premium Nga số 2 hộp 800g ...</a></h3>
+                            <div class="price">
+                                <span>530,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="439">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/-sua-nutrilon-premium-nga-so-1-.html" title=" Sữa NUTRILON Premium Nga số 1 ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460791705_4.jpg" title=" Sữa NUTRILON Premium Nga số 1 " data-tooltip="sticky438" alt=" Sữa NUTRILON Premium Nga số 1 ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-nutrilon-premium-nga-so-1-.html"> Sữa NUTRILON Premium Nga số 1 ...</a></h3>
+                            <div class="price">
+                                <span>530,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="438">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/-sua-de-vitacare-nga-so-3-hop-400g-nap-xanh-cho-be-tu-12-thang-tuoi.html" title=" Sữa dê Nanny Vitacare Nga số 3, hộp 400g ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460792341_sua-de-vitacare-so-3.jpg" title=" Sữa dê Nanny Vitacare Nga số 3, hộp 400g " data-tooltip="sticky437" alt=" Sữa dê Nanny Vitacare Nga số 3, hộp 400g ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-de-vitacare-nga-so-3-hop-400g-nap-xanh-cho-be-tu-12-thang-tuoi.html"> Sữa dê Nanny Vitacare Nga số 3, hộp 400...</a></h3>
+                            <div class="price">
+                                <span>475,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="437">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/chao-yen-mach-Fleur-Alpine-voi-sua-va-le-.html" title="Cháo yến mạch Fleur Alpine với  sữa và lê ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1468229186_Cháo_yến_mạch_Fleur_Alpine_với__sữa_và_lê.jpg" title="Cháo yến mạch Fleur Alpine với  sữa và lê " data-tooltip="sticky639" alt="Cháo yến mạch Fleur Alpine với  sữa và lê ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/chao-yen-mach-Fleur-Alpine-voi-sua-va-le-.html">Cháo yến mạch Fleur Alpine với  sữa và l...</a></h3>
+                            <div class="price">
+                                <span>145,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="639">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/chao-Fleur-Alpine-voi-hat-ke-sua-va-hon-hop-cac-loai-ngu-coc-.html" title="Cháo Fleur Alpine với hạt kê, sữa và hỗn hợp các loại ngũ cốc">
+                                <img src="/Assets/Js/Zoom/thumb_725_1468227541_Cháo_Fleur_Alpine_với_hạt_kê,_sữa_và_hỗn_hợp_các_loại_ngũ_cốc.jpg" title="Cháo Fleur Alpine với hạt kê, sữa và hỗn hợp các loại ngũ cốc" data-tooltip="sticky638" alt="Cháo Fleur Alpine với hạt kê, sữa và hỗn hợp các loại ngũ cốc">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/chao-Fleur-Alpine-voi-hat-ke-sua-va-hon-hop-cac-loai-ngu-coc-.html">Cháo Fleur Alpine với hạt kê, sữa và hỗn...</a></h3>
+                            <div class="price">
+                                <span>145,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="638">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/Chao-sua-Fleur-Alpine-voi-chiet-xuat-tu-ngo-.html" title="Cháo sữa Fleur Alpine với chiết xuất từ ngô">
+                                <img src="/Assets/Js/Zoom/thumb_725_1468226537_Cháo_sữa_Fleur_Alpine_với_chiết_xuất_từ_ngô.jpg" title="Cháo sữa Fleur Alpine với chiết xuất từ ngô" data-tooltip="sticky637" alt="Cháo sữa Fleur Alpine với chiết xuất từ ngô">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/Chao-sua-Fleur-Alpine-voi-chiet-xuat-tu-ngo-.html">Cháo sữa Fleur Alpine với chiết xuất từ ...</a></h3>
+                            <div class="price">
+                                <span>145,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="637">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/Sua-de-mamako-3-.html" title="Sữa dê Mamako 3">
+                                <img src="/Assets/Js/Zoom/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg" title="Sữa dê Mamako 3" data-tooltip="sticky578" alt="Sữa dê Mamako 3">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/Sua-de-mamako-3-.html">Sữa dê Mamako 3...</a></h3>
+                            <div class="price">
+                                <span>320,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="578">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/Sua-de-mamako-2-.html" title="Sữa dê Mamako 2">
+                                <img src="/Assets/Js/Zoom/thumb_725_1465200571_13401005_277989242550330_31273617_n.jpg" title="Sữa dê Mamako 2" data-tooltip="sticky577" alt="Sữa dê Mamako 2">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/Sua-de-mamako-2-.html">Sữa dê Mamako 2...</a></h3>
+                            <div class="price">
+                                <span>320,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="577">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/Sua-de-mamako-1-.html" title="Sữa dê Mamako 1 800g">
+                                <img src="/Assets/Js/Zoom/thumb_725_1465200357_13393117_277989239216997_1115469726_n.jpg" title="Sữa dê Mamako 1 800g" data-tooltip="sticky576" alt="Sữa dê Mamako 1 800g">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/Sua-de-mamako-1-.html">Sữa dê Mamako 1 800g...</a></h3>
+                            <div class="price">
+                                <span>500,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="576">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/sua-bot-nestle-clinutren-junior-400g-(tu-1-den-10-tuoi)-.html" title="Sữa bột Nestle Clinutren Junior 400g (từ 1 đến 10 tuổi) ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460789570_sua-beo-clinutren-junior4-chiaki-vn-jpg-1456113659-22022016110059.jpg" title="Sữa bột Nestle Clinutren Junior 400g (từ 1 đến 10 tuổi) " data-tooltip="sticky442" alt="Sữa bột Nestle Clinutren Junior 400g (từ 1 đến 10 tuổi) ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/sua-bot-nestle-clinutren-junior-400g-(tu-1-den-10-tuoi)-.html">Sữa bột Nestle Clinutren Junior 400g (từ...</a></h3>
+                            <div class="price">
+                                <span>365,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="442">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/-sua-tre-em-nutrilon-junior-4-thiet-ke-cho-tre-tu-18-thang-hop-400g-.html" title=" Sữa trẻ em Nutrilon Junior 4 thiết kế cho trẻ từ 18 tháng hộp 400g ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1462937924_Sữa_trẻ_em_Nutrilon_Junior_4_cho_trẻ_từ_18_tháng.jpg" title=" Sữa trẻ em Nutrilon Junior 4 thiết kế cho trẻ từ 18 tháng hộp 400g " data-tooltip="sticky441" alt=" Sữa trẻ em Nutrilon Junior 4 thiết kế cho trẻ từ 18 tháng hộp 400g ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-tre-em-nutrilon-junior-4-thiet-ke-cho-tre-tu-18-thang-hop-400g-.html"> Sữa trẻ em Nutrilon Junior 4 thiết kế c...</a></h3>
+                            <div class="price">
+                                <span>330,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="441">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/-sua-nutrilon-premium-nga-so-3-hop.html" title=" Sữa NUTRILON Premium Nga số 3 ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460790343_3.jpg" title=" Sữa NUTRILON Premium Nga số 3 " data-tooltip="sticky440" alt=" Sữa NUTRILON Premium Nga số 3 ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-nutrilon-premium-nga-so-3-hop.html"> Sữa NUTRILON Premium Nga số 3 ...</a></h3>
+                            <div class="price">
+                                <span>530,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="440">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/-sua-nutrilon-premium-nga-so-2-hop-800g-.html" title=" Sữa NUTRILON Premium Nga số 2 hộp 800g ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460790941_2.jpg" title=" Sữa NUTRILON Premium Nga số 2 hộp 800g " data-tooltip="sticky439" alt=" Sữa NUTRILON Premium Nga số 2 hộp 800g ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-nutrilon-premium-nga-so-2-hop-800g-.html"> Sữa NUTRILON Premium Nga số 2 hộp 800g ...</a></h3>
+                            <div class="price">
+                                <span>530,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="439">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/-sua-nutrilon-premium-nga-so-1-.html" title=" Sữa NUTRILON Premium Nga số 1 ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460791705_4.jpg" title=" Sữa NUTRILON Premium Nga số 1 " data-tooltip="sticky438" alt=" Sữa NUTRILON Premium Nga số 1 ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-nutrilon-premium-nga-so-1-.html"> Sữa NUTRILON Premium Nga số 1 ...</a></h3>
+                            <div class="price">
+                                <span>530,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="438">Mua hàng</button>
+                        </div>
+                    </li>
+
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;">
+                        <div class="image">
+                            <a href="/-sua-de-vitacare-nga-so-3-hop-400g-nap-xanh-cho-be-tu-12-thang-tuoi.html" title=" Sữa dê Nanny Vitacare Nga số 3, hộp 400g ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1460792341_sua-de-vitacare-so-3.jpg" title=" Sữa dê Nanny Vitacare Nga số 3, hộp 400g " data-tooltip="sticky437" alt=" Sữa dê Nanny Vitacare Nga số 3, hộp 400g ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/-sua-de-vitacare-nga-so-3-hop-400g-nap-xanh-cho-be-tu-12-thang-tuoi.html"> Sữa dê Nanny Vitacare Nga số 3, hộp 400...</a></h3>
+                            <div class="price">
+                                <span>475,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="437">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/chao-yen-mach-Fleur-Alpine-voi-sua-va-le-.html" title="Cháo yến mạch Fleur Alpine với  sữa và lê ">
+                                <img src="/Assets/Js/Zoom/thumb_725_1468229186_Cháo_yến_mạch_Fleur_Alpine_với__sữa_và_lê.jpg" title="Cháo yến mạch Fleur Alpine với  sữa và lê " data-tooltip="sticky639" alt="Cháo yến mạch Fleur Alpine với  sữa và lê ">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/chao-yen-mach-Fleur-Alpine-voi-sua-va-le-.html">Cháo yến mạch Fleur Alpine với  sữa và l...</a></h3>
+                            <div class="price">
+                                <span>145,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="639">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/chao-Fleur-Alpine-voi-hat-ke-sua-va-hon-hop-cac-loai-ngu-coc-.html" title="Cháo Fleur Alpine với hạt kê, sữa và hỗn hợp các loại ngũ cốc">
+                                <img src="/Assets/Js/Zoom/thumb_725_1468227541_Cháo_Fleur_Alpine_với_hạt_kê,_sữa_và_hỗn_hợp_các_loại_ngũ_cốc.jpg" title="Cháo Fleur Alpine với hạt kê, sữa và hỗn hợp các loại ngũ cốc" data-tooltip="sticky638" alt="Cháo Fleur Alpine với hạt kê, sữa và hỗn hợp các loại ngũ cốc">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/chao-Fleur-Alpine-voi-hat-ke-sua-va-hon-hop-cac-loai-ngu-coc-.html">Cháo Fleur Alpine với hạt kê, sữa và hỗn...</a></h3>
+                            <div class="price">
+                                <span>145,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="638">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/Chao-sua-Fleur-Alpine-voi-chiet-xuat-tu-ngo-.html" title="Cháo sữa Fleur Alpine với chiết xuất từ ngô">
+                                <img src="/Assets/Js/Zoom/thumb_725_1468226537_Cháo_sữa_Fleur_Alpine_với_chiết_xuất_từ_ngô.jpg" title="Cháo sữa Fleur Alpine với chiết xuất từ ngô" data-tooltip="sticky637" alt="Cháo sữa Fleur Alpine với chiết xuất từ ngô">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/Chao-sua-Fleur-Alpine-voi-chiet-xuat-tu-ngo-.html">Cháo sữa Fleur Alpine với chiết xuất từ ...</a></h3>
+                            <div class="price">
+                                <span>145,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="637">Mua hàng</button>
+                        </div>
+                    </li>
+                    <li style="float: left; list-style: none; position: relative; width: 215px; margin-right: 20px;" class="bx-clone">
+                        <div class="image">
+                            <a href="/Sua-de-mamako-3-.html" title="Sữa dê Mamako 3">
+                                <img src="/Assets/Js/Zoom/thumb_725_1465200616_13384872_277989245883663_1680961431_n.jpg" title="Sữa dê Mamako 3" data-tooltip="sticky578" alt="Sữa dê Mamako 3">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <h3><a href="/Sua-de-mamako-3-.html">Sữa dê Mamako 3...</a></h3>
+                            <div class="price">
+                                <span>320,000 đ đ</span>
+
+                            </div>
+                            <button class="btn ajax" title="578">Mua hàng</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bx-controls bx-has-pager bx-has-controls-direction">
+            <div class="bx-pager bx-default-pager">
+                <div class="bx-pager-item">
+                <a href="/Sua-de-mamako-3-.html" data-slide-index="0" class="bx-pager-link active">1</a>
+                </div>
+                <div class="bx-pager-item">
+                <a href="/Sua-de-mamako-3-.html" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="/Sua-de-mamako-3-.html" data-slide-index="2" class="bx-pager-link">3</a></div></div>
+            
+            </div>
+        </div>
+        <div id="mystickytooltip" class="stickytooltip">
+            <div style="padding:5px">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+            $('.bxslider').bxSlider({
+            minSlides: 3,
+            maxSlides: 4,
+            slideWidth: 215,
+            slideMargin: 20
+          });
+</script>
+
+<style>
+    .pluginFontHelvetica > div {
+        width: 100% !important;
+    }
+
+    #___comments_0 {
+        width: 100% !important;
+    }
+
+    iframe {
+        width: 100% !important;
+    }
+</style>
+<script src="/Assets/Js/Zoom/platform.js" async="" defer="" gapi_processed="true">
+  {lang: 'vi'}
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=780020678786801";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+            var isclick = true;
+           $('.btnshowcat').click(function(){
+               if(isclick == true)
+               {
+                   $('.listcategory').slideDown();
+                   isclick = false;
+               }
+               else
+               {
+                   $('.listcategory').slideUp();
+                   isclick = true;
+               }
+           });
+          var nav = $('.menu_fix');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 136) {
+                    nav.addClass("nav_menutop");
+                    $('#wrapper .content .content_1 .category .listcategory').slideUp();
+                    $('#wrapper .content .content_1 .category .nav_menu_cat').css('position','initial');
+                    isclick = true;
+
+                } else {
+                    nav.removeClass("nav_menutop");
+                    $('#wrapper .content .content_1 .category .nav_menu_cat').css('position','absolute');
+                }
+            });
+</script>
+<script>
+	$("#zoom_01").elevateZoom({
+	});
+</script>
+
