@@ -436,6 +436,7 @@ h3{
 }
 #wrapper .content .content_2 .left .list_product .list_content ul.list li .description{
     width:100%;
+    min-height: 145px;
     border-top:1px solid #eaeaea;
     background:#f7f7f7;
     padding:15px;
