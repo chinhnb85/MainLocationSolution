@@ -1,19 +1,18 @@
-using System;
 using System.Collections.Generic;
 
 namespace ModelCMS.Account
 {
 	public interface IAccount
-	{
-		long Insert(AccountEntity account);		
-        bool Update(AccountEntity account);
-	    bool UpdateAvatar(AccountEntity account);
-        bool Delete(long id, long adminId, int adminType);
+    {
+		long Insert(AccountEntity obj);		
+        bool Update(AccountEntity obj);
+	    bool UpdateAvatar(AccountEntity obj);
+        bool Delete(long id, long accountId, int type);
 		List<AccountEntity> ListAll();
-        List<AccountEntity> ListAllPaging(AccountEntity userInfo, int pageIndex, int pageSize, string sortColumn, string sortDesc, ref int totalRow);
+        List<AccountEntity> ListAllPaging(AccountEntity accountInfo, int pageIndex, int pageSize, string sortColumn, string sortDesc, ref int totalRow);
 		AccountEntity ViewDetail(string id);
-	    bool CheckUsernameExist(string username);
-	    bool Login(string userName, string password, ref AccountEntity account);
+	    bool CheckUserNameExist(string userName);
+	    bool Login(string userName, string password, ref AccountEntity obj);
         bool ChangePassword(long id, string oldPassword,string newPassword);
 	    bool CheckResetPassword(string oldPass, string email);
 	    bool ResetPassword(string email, string password);

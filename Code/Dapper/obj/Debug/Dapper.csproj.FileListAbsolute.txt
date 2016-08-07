@@ -3,3 +3,8 @@ F:\Chinhnb\MainLocation\MainLocationSolution\Code\Dapper\bin\Debug\Dapper.pdb
 F:\Chinhnb\MainLocation\MainLocationSolution\Code\Dapper\obj\Debug\Dapper.dll
 F:\Chinhnb\MainLocation\MainLocationSolution\Code\Dapper\obj\Debug\Dapper.pdb
 F:\Chinhnb\MainLocation\MainLocationSolution\Code\Dapper\obj\Debug\Dapper.csprojFakesResolveAssemblyReference.cache
+D:\Project\MainLocationSolution\Code\Dapper\bin\Debug\Dapper.dll
+D:\Project\MainLocationSolution\Code\Dapper\bin\Debug\Dapper.pdb
+D:\Project\MainLocationSolution\Code\Dapper\obj\Debug\Dapper.csprojResolveAssemblyReference.cache
+D:\Project\MainLocationSolution\Code\Dapper\obj\Debug\Dapper.dll
+D:\Project\MainLocationSolution\Code\Dapper\obj\Debug\Dapper.pdb
