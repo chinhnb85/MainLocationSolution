@@ -7,7 +7,7 @@
 <div class="login-container animated fadeInDown">
     <div class="loginbox bg-white">
         <div class="loginbox-title">Đăng nhập hệ thống</div>
-        <div class="loginbox-social">
+        @*<div class="loginbox-social">
             <div class="social-title ">Đăng nhập bằng tài khoản mạng xã hội</div>
             <div class="social-buttons">
                 <a href="" class="button-facebook">
@@ -24,12 +24,15 @@
         <div class="loginbox-or">
             <div class="or-line"></div>
             <div class="or">Hoặc</div>
+        </div>*@
+        <div class="loginbox-or">
+            <div class="or-line"></div>    
         </div>
         <div class="loginbox-textbox">
-            <input type="text" id="UserName" name="UserName" class="form-control" placeholder="Tên đăng nhập or Email" />
+            <input type="text" id="UserName" name="UserName" class="form-control" placeholder="Tên đăng nhập" />
         </div>
         <div class="loginbox-textbox">
-            <input type="text" id="Password" name="Password" class="form-control" placeholder="Mật khẩu" />
+            <input type="password" id="Password" name="Password" class="form-control" placeholder="Mật khẩu" />
         </div>
         <div class="loginbox-forgot">
             <a href="">Lấy lại mật khẩu?</a>
@@ -37,13 +40,13 @@
         <div class="loginbox-submit">
             <input type="button" id="btnLogin" class="btn btn-primary btn-block" value="Đăng nhập">
         </div>
-        <div class="loginbox-signup">
+        @*<div class="loginbox-signup">
             <a href="register.html">Đăng ký tài khoản mới với Email</a>
-        </div>
+        </div>*@
     </div>
-    <div class="logobox">        
+    @*<div class="logobox">        
         <img src="/assets/img/logo.png" alt="" width="180" />            
-    </div>
+    </div>*@
 </div>
 @section PageScripts {
     @Scripts.Render("~/bundles/jqueryval")
