@@ -67,3 +67,80 @@ BEGIN
 	SET NOCOUNT ON;    
 	SELECT * FROM Account where (UserName=@userName or Email=@userName) and [Password]=@password
 END
+GO
+
+CREATE TABLE [dbo].[Category](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ParentId] [int] NULL,
+	[Type] [int] NULL,
+	[Name] [nvarchar](250) NULL,
+	[Url] [varchar](250) NULL,
+	[Position] [int] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedDate] [datetime] NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[Product](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryId] [int] NULL,
+	[ManufacturerId] [int] NULL,
+	[Name] [nvarchar](250) NULL,
+	[Url] [varchar](250) NULL,
+	[Avatar] [varchar](250) NULL,
+	[Price] [varchar](50) NULL,
+	[PriceKm] [varchar](50) NULL,
+	[Condition] [nvarchar](50) NULL,
+	[Weigh] [nvarchar](50) NULL,
+	[Origin] [nvarchar](50) NULL,
+	[Description] [ntext] NULL,
+	[Video] [ntext] NULL,
+	[CountView] [int] NULL,
+	[IsHighlights] [bit] NULL,
+	[IsTop] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedDate] [datetime] NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+CREATE TABLE [dbo].[Manufacturer](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Manufacturer] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+CREATE TABLE [dbo].[News](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryId] [int] NULL,
+	[Title] [nvarchar](250) NULL,
+	[Url] [varchar](250) NULL,
+	[Avatar] [varchar](250) NULL,
+	[Sapo] [nvarchar](1000) NULL,
+	[Content] [ntext] NULL,
+	[Author] [nvarchar](50) NULL,
+	[CountView] [int] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedDate] [datetime] NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_News] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
