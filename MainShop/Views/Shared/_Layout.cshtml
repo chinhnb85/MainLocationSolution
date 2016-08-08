@@ -391,28 +391,7 @@
                 </div>
                 <!-- /Page Sidebar Header -->
                 <!-- Sidebar Menu -->
-                <ul class="nav sidebar-menu">
-                    <!--Dashboard-->
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon glyphicon glyphicon-home"></i>
-                            <span class="menu-text"> Dashboard </span>
-                        </a>
-                    </li>
-                    <!--location-->
-                    <li>
-                        <a href="Location/Created">
-                            <i class="menu-icon glyphicon glyphicon-tasks"></i>
-                            <span class="menu-text"> Created user </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Location">
-                            <i class="menu-icon glyphicon glyphicon-tasks"></i>
-                            <span class="menu-text"> Location user </span>
-                        </a>
-                    </li>
-                </ul>
+                @Html.Partial("_SlidebarMenu");
                 <!-- /Sidebar Menu -->
             </div>
             <!-- /Page Sidebar -->

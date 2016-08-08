@@ -14,10 +14,10 @@ namespace MainShop.Controllers.Base
     {        
         protected override void Initialize(HttpControllerContext controllerContext)
         {
-            if (controllerContext.Request.Headers.Host != "localhost:2016")
-            {
-                throw new HttpResponseException(controllerContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Access denied!"));
-            }
+            //if (controllerContext.Request.Headers.Host != "localhost:2016")
+            //{
+            //    throw new HttpResponseException(controllerContext.Request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Access denied!"));
+            //}
             base.Initialize(controllerContext);
         }        
     }
