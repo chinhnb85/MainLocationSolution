@@ -185,6 +185,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Code\Common.cs" />
     <Compile Include="Code\SessionUtility.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApiControllers\CategoryApiController.cs" />
@@ -262,6 +263,7 @@
     <Content Include="assets\img\sort_desc_disabled.png" />
     <Content Include="assets\img\temp1.png" />
     <Content Include="assets\img\tree-icons.png" />
+    <Content Include="assets\modules\categoryController.js" />
     <Content Include="assets\modules\loginController.js" />
     <Content Include="assets\modules\homeController.js" />
     <Content Include="assets\js\beyond.js" />
@@ -455,6 +457,7 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Shared\_SlidebarMenu.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Shared\_PageBreadcrumb.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Code\LibCore\LibCore.csproj">

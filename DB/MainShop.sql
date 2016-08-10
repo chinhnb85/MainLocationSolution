@@ -87,6 +87,15 @@ CREATE TABLE [dbo].[Category](
 
 GO
 
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Category] ADD  CONSTRAINT [DF_Category_CreatedDate]  DEFAULT (getdate()) FOR [CreatedDate]
+GO
+
+ALTER TABLE [dbo].[Category] ADD  CONSTRAINT [DF_Category_Status]  DEFAULT ((1)) FOR [Status]
+GO
+
 CREATE TABLE [dbo].[Product](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[CategoryId] [int] NULL,
@@ -144,3 +153,53 @@ CREATE TABLE [dbo].[News](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
+-- =============================================
+-- Author:		CHINHNB
+-- Create date: 12/07/2016
+-- Description:	insert
+-- =============================================
+CREATE PROCEDURE [dbo].[Sp_Category_Insert]
+ 	@Name nvarchar(250),
+ 	@Url varchar(250),
+ 	@CreatedBy varchar(50),
+ 	@ParentId int,
+ 	@Type int,
+ 	@Position int,
+ 	@Id int output
+AS
+BEGIN	
+	SET NOCOUNT ON;    
+	INSERT INTO Category(ParentId,Type,Name,Url,Position,CreatedBy) values(@ParentId,@Type,@Name,@Url,@Position,@CreatedBy)
+	set @Id=SCOPE_IDENTITY()
+END
+
+GO
+-- =============================================
+-- Author: chinhnb
+-- Create date: 10/08/2016
+-- Description:	
+-- =============================================
+CREATE procedure [dbo].[Sp_Category_ListAllPaging]
+
+(
+@pageIndex int,
+@pageSize int,
+@totalRow int output
+)
+
+as
+
+set nocount on
+
+DECLARE @UpperBand int, @LowerBand int
+
+SELECT @totalRow = COUNT(*) FROM Category					
+
+SET @LowerBand  = (@pageIndex - 1) * @PageSize
+SET @UpperBand  = (@pageIndex * @PageSize)
+SELECT * FROM (
+SELECT *,ROW_NUMBER() OVER(ORDER BY Id DESC) AS RowNumber 
+FROM Category
+
+) AS temp
+WHERE RowNumber > @LowerBand AND RowNumber <= @UpperBand

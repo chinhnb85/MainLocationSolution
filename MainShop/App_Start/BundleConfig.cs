@@ -45,6 +45,9 @@ namespace MainShop
                 "~/assets/css/animate.min.css"
                 ));
 
+            bundles.Add(new ScriptBundle("~/css/datatable").Include(
+                "~/assets/css/dataTables.bootstrap.css"));
+
             bundles.Add(new ScriptBundle("~/bundles/skin").Include(
                 "~/assets/js/skins.min.js"));
             
@@ -58,6 +61,12 @@ namespace MainShop
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/assets/js/jqueryval/jquery.validate*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/datatable").Include(
+                "~/assets/js/datatable/jquery.dataTables.min.js",
+                "~/assets/js/datatable/dataTables.tableTools.min.js",
+                "~/assets/js/datatable/dataTables.bootstrap.min.js",
+                "~/assets/js/datatable/datatables-init.js"));
         }
     }
 }

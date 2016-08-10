@@ -18,16 +18,13 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
-
-
     <!--Fonts-->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300"
           rel="stylesheet" type="text/css">
-
     <!--Beyond styles-->
     @Styles.Render("~/css/beyond")
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
-
+    @Styles.Render("~/css/datatable")
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     @Scripts.Render("~/bundles/skin")
 
@@ -65,7 +62,7 @@
                 <div class="navbar-header pull-right">
                     <div class="navbar-account">
                         <ul class="account-area">
-                            <li>
+                            @*<li>
                                 <a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
                                     <i class="icon fa fa-warning"></i>
                                 </a>
@@ -214,7 +211,6 @@
                                 </ul>
                                 <!--/Messages Dropdown-->
                             </li>
-
                             <li>
                                 <a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
                                     <i class="icon fa fa-tasks"></i>
@@ -292,14 +288,14 @@
                                 <a class="wave in" id="chat-link" title="Chat" href="#">
                                     <i class="icon glyphicon glyphicon-comment"></i>
                                 </a>
-                            </li>
+                            </li>*@
                             <li>
                                 <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                     <div class="avatar" title="View your public profile">
                                         <img src="/assets/img/avatars/Osvaldus-Valutis.jpg">
                                     </div>
                                     <section>
-                                        <h2><span class="profile"><span>Admin</span></span></h2>
+                                        <h2><span class="profile"><span>Administrator</span></span></h2>
                                     </section>
                                 </a>
                                 <!--Login Area Dropdown-->
@@ -310,13 +306,13 @@
                                     <li>
                                         <div class="avatar-area">
                                             <img src="/assets/img/avatars/adam-jansen.jpg" class="avatar">
-                                            <span class="caption">Change Photo</span>
+                                            <span class="caption">Đổi ảnh</span>
                                         </div>
                                     </li>
                                     <!--Avatar Area-->
                                     <li class="edit">
-                                        <a href="profile.html" class="pull-left">Profile</a>
-                                        <a href="#" class="pull-right">Setting</a>
+                                        <a href="#" class="pull-left">Về tôi</a>
+                                        <a href="#" class="pull-right">Cài đặt</a>
                                     </li>
                                     <!--Theme Selector Area-->
                                     <li class="theme-area">
@@ -344,15 +340,17 @@
                                 </ul>
                                 <!--/Login Area Dropdown-->
                             </li>
-                            <!-- /Account Area -->
-                            <!--Note: notice that setting div must start right after account area list.
+                            <!-- /Account Area -->                            
+                        </ul>
+                        <!--Note: notice that setting div must start right after account area list.
                             no space must be between these elements-->
-                            <!-- Settings -->
-                        </ul><div class="setting">
+                        <!-- Settings -->
+                        <div class="setting">
                             <a id="btn-setting" title="Setting" href="#">
                                 <i class="icon glyphicon glyphicon-cog"></i>
                             </a>
-                        </div><div class="setting-container">
+                        </div>
+                        @*<div class="setting-container">
                             <label>
                                 <input type="checkbox" id="checkbox_fixednavbar">
                                 <span class="text">Fixed Navbar</span>
@@ -369,7 +367,7 @@
                                 <input type="checkbox" id="checkbox_fixedheader">
                                 <span class="text">Fixed Header</span>
                             </label>
-                        </div>
+                        </div>*@
                         <!-- Settings -->
                     </div>
                 </div>
@@ -388,11 +386,11 @@
                 <div class="sidebar-header-wrapper">
                     <input type="text" class="searchinput" />
                     <i class="searchicon fa fa-search"></i>
-                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                    <div class="searchhelper">Tìm kiếm ...</div>
                 </div>
                 <!-- /Page Sidebar Header -->
                 <!-- Sidebar Menu -->
-                @Html.Partial("_SlidebarMenu");
+                @Html.Partial("_SlidebarMenu")
                 <!-- /Sidebar Menu -->
             </div>
             <!-- /Page Sidebar -->
@@ -402,7 +400,7 @@
                     <div class="contacts-search">
                         <input type="text" class="searchinput" placeholder="Search Contacts" />
                         <i class="searchicon fa fa-search"></i>
-                        <div class="searchhelper">Search Your Contacts and Chat History</div>
+                        <div class="searchhelper">Tìm kiếm ...</div>
                     </div>
                     <ul class="contacts-list">
                         <li class="contact">
@@ -634,42 +632,9 @@
             <!-- /Chat Bar -->
             <!-- Page Content -->
             <div class="page-content">
-                <!-- Page Breadcrumb -->
-                <div class="page-breadcrumbs">
-                    <ul class="breadcrumb">
-                        <li>
-                            <i class="fa fa-home"></i>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="active">Dashboard</li>
-                    </ul>
-                </div>
-                <!-- /Page Breadcrumb -->
-                <!-- Page Header -->
-                <div class="page-header position-relative">
-                    <div class="header-title">
-                        <h1>
-                            Dashboard
-                        </h1>
-                    </div>
-                    <!--Header Buttons-->
-                    <div class="header-buttons">
-                        <a class="sidebar-toggler" href="#">
-                            <i class="fa fa-arrows-h"></i>
-                        </a>
-                        <a class="refresh" id="refresh-toggler" href="">
-                            <i class="glyphicon glyphicon-refresh"></i>
-                        </a>
-                        <a class="fullscreen" id="fullscreen-toggler" href="#">
-                            <i class="glyphicon glyphicon-fullscreen"></i>
-                        </a>
-                    </div>
-                    <!--Header Buttons End-->
-                </div>
-                <!-- /Page Header -->
+                @*@Html.Partial("_PageBreadcrumb")*@
                 <!-- Page Body -->
-                <div class="page-body">
-                    <!-- Your Content Goes Here -->
+                <div class="page-body">                    
                     @RenderBody()
                 </div>
                 <!-- /Page Body -->
@@ -683,6 +648,8 @@
     
     <!--Beyond Scripts-->
     @Scripts.Render("~/bundles/beyond")
+
+    @Scripts.Render("~/bundles/datatable")
 
     <!--Page Related Scripts-->
     @RenderSection("PageScripts", required: false)

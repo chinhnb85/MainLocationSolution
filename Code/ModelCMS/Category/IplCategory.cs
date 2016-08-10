@@ -115,9 +115,7 @@ namespace ModelCMS.Category
             {
                 var p = new DynamicParameters();                        
                 p.Add("@pageIndex", pageIndex);
-                p.Add("@pageSize", pageSize);
-                p.Add("@sortColumn", sortColumn);
-                p.Add("@sortDesc", sortDesc);
+                p.Add("@pageSize", pageSize);                
                 p.Add("@totalRow", dbType: DbType.Int32, direction: ParameterDirection.Output);
                 var data = unitOfWork.Procedure<CategoryEntity>("Sp_Category_ListAllPaging", p);
                 totalRow = p.Get<int>("@totalRow");
@@ -138,7 +136,12 @@ namespace ModelCMS.Category
             var p = new DynamicParameters();
             if (action == "add")
             {
-                p.Add("@Type", obj.Type);               
+                p.Add("@Name", obj.Name);
+                p.Add("@ParentId", obj.ParentId);
+                p.Add("@Type", obj.Type);
+                p.Add("@Url", obj.Url);
+                p.Add("@Position", obj.Position);
+                p.Add("@CreatedBy", obj.CreatedBy);
                 p.Add("@Id", dbType: DbType.Int64, direction: ParameterDirection.Output);
             }
             else if(action == "edit")
