@@ -1,60 +1,60 @@
 ﻿if (typeof (CmsShop) == "undefined") CmsShop = {};
-if (typeof (CmsShop.Category) == "undefined") CmsShop.Category = {};
+if (typeof (CmsShop.Product) == "undefined") CmsShop.Product = {};
 
-CmsShop.Category = {
+CmsShop.Product = {
     PageSize: 100,
     PageIndex:1
 }
 
-CmsShop.Category.Init = function () {
-    var $this = CmsShop.Category;    
+CmsShop.Product.Init = function () {
+    var $this = CmsShop.Product;    
 
-    $this.LoadAllCategory(function (data) {
-        $this.LoadDropdowListCategory(data);
-        //$("#sltCategory").chosen();
+    $this.LoadAllProduct(function (data) {
+        $this.LoadDropdowListProduct(data);
+        //$("#sltProduct").chosen();
     });
 
     $this.RegisterEvents();
 };
 
-CmsShop.Category.RegisterEvents = function () {
-    var $this = CmsShop.Category;
+CmsShop.Product.RegisterEvents = function () {
+    var $this = CmsShop.Product;
 
-    $("#btnAddNewCategory").off("click").on("click", function () {
-        $this.AddNewCategory();
+    $("#btnAddNewProduct").off("click").on("click", function () {
+        $this.AddNewProduct();
     });
 };
 
-CmsShop.Category.AddNewCategory = function () {
-    var $this = CmsShop.Category;
+CmsShop.Product.AddNewProduct = function () {
+    var $this = CmsShop.Product;
 
-    var name = $("#txtNameCategory").val();
-    var parentId = $("#sltCategory").val();
+    var name = $("#txtNameProduct").val();
+    var parentId = $("#sltProduct").val();
 
     var data = { name: name, parentId: parentId };
 
-    $.post("/Category/Add", data, function (res) {
+    $.post("/Product/Add", data, function (res) {
         if (res.status) {
-            $("#txtNameCategory").val("");
-            $("#sltCategory").val(0);
+            $("#txtNameProduct").val("");
+            $("#sltProduct").val(0);
 
-            $this.LoadAllCategory(function (obj) {
-                $this.LoadDropdowListCategory(obj);
-                //$("#sltCategory").chosen();
-                //$("#sltCategory").trigger('liszt:updated');
+            $this.LoadAllProduct(function (obj) {
+                $this.LoadDropdowListProduct(obj);
+                //$("#sltProduct").chosen();
+                //$("#sltProduct").trigger('liszt:updated');
             });
         }
     }, "json");
 };
 
-CmsShop.Category.LoadAllCategory = function (callback) {
-    var $this = CmsShop.Category;
+CmsShop.Product.LoadAllProduct = function (callback) {
+    var $this = CmsShop.Product;
 
     var data = { pageIndex: $this.PageIndex, pageSize: $this.PageSize };
 
-    $.get("/Category/ListAllPaging", data, function (res) {
+    $.get("/Product/ListAllPaging", data, function (res) {
         if (res.status) {            
-            $("#listAllCategory").empty();
+            $("#listAllProduct").empty();
             $.each(res.Data, function (i, item) {
                 if (item.ParentId === 0) {
                     var temp = '<tr>' +
@@ -65,7 +65,7 @@ CmsShop.Category.LoadAllCategory = function (callback) {
                         '<a href="#" class="btn btn-danger btn-xs delete" data-id="' + item.Id + '"><i class="fa fa-trash-o"></i> Delete</a>' +
                         '</td>' +
                         '</tr>';
-                    $("#listAllCategory").append(temp);
+                    $("#listAllProduct").append(temp);
                     $.each(res.Data, function (j, item1) {
                         if (item.Id === item1.ParentId) {
                             temp = '<tr>' +
@@ -76,7 +76,7 @@ CmsShop.Category.LoadAllCategory = function (callback) {
                                 '<a href="#" class="btn btn-danger btn-xs delete" data-id="' + item1.Id + '"><i class="fa fa-trash-o"></i> Delete</a>' +
                                 '</td>' +
                                 '</tr>';
-                            $("#listAllCategory").append(temp);
+                            $("#listAllProduct").append(temp);
                             $.each(res.Data, function (k, item2) {
                                 if (item1.Id === item2.ParentId) {
                                     temp = '<tr>' +
@@ -87,7 +87,7 @@ CmsShop.Category.LoadAllCategory = function (callback) {
                                         '<a href="#" class="btn btn-danger btn-xs delete" data-id="' + item2.Id + '"><i class="fa fa-trash-o"></i> Delete</a>' +
                                         '</td>' +
                                         '</tr>';
-                                    $("#listAllCategory").append(temp);
+                                    $("#listAllProduct").append(temp);
                                     $.each(res.Data, function (m, item3) {
                                         if (item2.Id === item3.ParentId) {
                                             temp = '<tr>' +
@@ -98,7 +98,7 @@ CmsShop.Category.LoadAllCategory = function (callback) {
                                                 '<a href="#" class="btn btn-danger btn-xs delete" data-id="' + item3.Id + '"><i class="fa fa-trash-o"></i> Delete</a>' +
                                                 '</td>' +
                                                 '</tr>';
-                                            $("#listAllCategory").append(temp);
+                                            $("#listAllProduct").append(temp);
                                         }
                                     });
                                 }
@@ -114,7 +114,7 @@ CmsShop.Category.LoadAllCategory = function (callback) {
     }, "json");
 };
 
-CmsShop.Category.LoadDropdowListCategory = function (data) {
+CmsShop.Product.LoadDropdowListProduct = function (data) {
     if (data != null) {                
         var temp = '<option value="0">Danh mục</option>';        
         $.each(data, function (i, item) {
@@ -142,13 +142,13 @@ CmsShop.Category.LoadDropdowListCategory = function (data) {
             }
         });
 
-        $("#sltCategory").empty().html(temp);
+        $("#sltProduct").empty().html(temp);
         
-        $("#sltCategory").chosen();
-        $("#sltCategory").trigger("liszt:updated");
+        $("#sltProduct").chosen();
+        $("#sltProduct").trigger("liszt:updated");
     }
 };
 
 $(function(){
-    CmsShop.Category.Init();
+    CmsShop.Product.Init();
 });

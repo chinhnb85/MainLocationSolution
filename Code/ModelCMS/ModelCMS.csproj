@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Product\ProductEntity.cs" />
+    <Compile Include="Product\IProduct.cs" />
+    <Compile Include="Product\IplProduct.cs" />
     <Compile Include="Category\CategoryEntity.cs" />
     <Compile Include="Category\ICategory.cs" />
     <Compile Include="Category\IplCategory.cs" />
