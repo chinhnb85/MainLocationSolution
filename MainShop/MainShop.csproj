@@ -364,6 +364,13 @@
     <Content Include="assets\js\toastr\toastr.min.js" />
     <Content Include="assets\js\validation\bootstrapValidator.js" />
     <Content Include="assets\js\validation\bootstrapValidator.min.js" />
+    <Content Include="assets\modules\plugins\chosen\css\chosen.css" />
+    <Content Include="assets\modules\plugins\chosen\images\chosen-sprite.png" />
+    <Content Include="assets\modules\plugins\chosen\js\chosen.jquery.min.js" />
+    <Content Include="assets\modules\plugins\jScrollPane\css\jquery.jscrollpane.css" />
+    <Content Include="assets\modules\plugins\jScrollPane\js\jquery.jscrollpane.min.js" />
+    <Content Include="assets\modules\plugins\tipsy\css\tipsy.css" />
+    <Content Include="assets\modules\plugins\tipsy\js\jquery.tipsy.js" />
     <Content Include="assets\sound\alert.mp3" />
     <Content Include="assets\swf\copy_csv_xls.swf" />
     <Content Include="assets\swf\copy_csv_xls_pdf.swf" />

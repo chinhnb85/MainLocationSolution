@@ -45,7 +45,7 @@ namespace MainShop
                 "~/assets/css/animate.min.css"
                 ));
 
-            bundles.Add(new ScriptBundle("~/css/datatable").Include(
+            bundles.Add(new StyleBundle("~/css/datatable").Include(
                 "~/assets/css/dataTables.bootstrap.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/skin").Include(
@@ -67,6 +67,16 @@ namespace MainShop
                 "~/assets/js/datatable/dataTables.tableTools.min.js",
                 "~/assets/js/datatable/dataTables.bootstrap.min.js",
                 "~/assets/js/datatable/datatables-init.js"));
+
+            bundles.Add(new StyleBundle("~/css/chosen").Include(
+                "~/assets/modules/plugins/chosen/css/chosen.css",
+                "~/assets/modules/plugins/jScrollPane/css/jquery.jscrollpane.css",
+                "~/assets/modules/plugins/tipsy/css/tipsy.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/chosen").Include(                
+                "~/assets/modules/plugins/chosen/js/chosen.jquery.min.js",
+                "~/assets/modules/plugins/jScrollPane/js/jquery.jscrollpane.min.js",
+                "~/assets/modules/plugins/tipsy/js/jquery.tipsy.js"));
         }
     }
 }

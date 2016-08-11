@@ -2,15 +2,16 @@
 if (typeof (CmsShop.Category) == "undefined") CmsShop.Category = {};
 
 CmsShop.Category = {
-    PageSize: 10,
+    PageSize: 100,
     PageIndex:1
 }
 
 CmsShop.Category.Init = function () {
-    var $this = CmsShop.Category;
-    
+    var $this = CmsShop.Category;    
+
     $this.LoadAllCategory(function (data) {
         $this.LoadDropdowListCategory(data);
+        //$("#sltCategory").chosen();
     });
 
     $this.RegisterEvents();
@@ -39,6 +40,8 @@ CmsShop.Category.AddNewCategory = function () {
 
             $this.LoadAllCategory(function (data) {
                 $this.LoadDropdowListCategory(data);
+                //$("#sltCategory").chosen();
+                //$("#sltCategory").trigger('liszt:updated');
             });
         }
     }, "json");
@@ -72,14 +75,38 @@ CmsShop.Category.LoadAllCategory = function (callback) {
 };
 
 CmsShop.Category.LoadDropdowListCategory = function (data) {
-    if (data != null) {        
-        $("#sltCategory").html("");
+    if (data != null) {                
         var temp = '<option value="0">Danh mục</option>';
-        $("#sltCategory").append(temp);
+        
         $.each(data, function (i, item) {
-            temp = '<option value="' + item.Id + '">' + item.Name + '</option>';
-            $("#sltCategory").append(temp);
+            var name = item.Name;
+            if (item.ParentId === 0) {
+                temp += '<option value="' + item.Id + '">' + name + '</option>';
+                $.each(data, function (i, item1) {
+                    if (item.Id === item1.ParentId) {
+                        name = "--- " + item1.Name;
+                        temp += '<option value="' + item1.Id + '">' + name + '</option>';
+                        $.each(data, function (i, item2) {
+                            if (item1.Id === item2.ParentId) {
+                                name = "------ " + item2.Name;
+                                temp += '<option value="' + item2.Id + '">' + name + '</option>';
+                                $.each(data, function (i, item3) {
+                                    if (item2.Id === item3.ParentId) {
+                                        name = "--------- " + item3.Name;
+                                        temp += '<option value="' + item3.Id + '">' + name + '</option>';
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });                
+            }
         });
+
+        $("#sltCategory").empty().html(temp);
+        
+        $("#sltCategory").chosen();
+        $("#sltCategory").trigger('liszt:updated');
     }
 };
 

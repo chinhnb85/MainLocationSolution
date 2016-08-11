@@ -25,6 +25,7 @@
     @Styles.Render("~/css/beyond")
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
     @Styles.Render("~/css/datatable")
+    @Styles.Render("~/css/chosen")
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     @Scripts.Render("~/bundles/skin")
 
@@ -650,6 +651,8 @@
     @Scripts.Render("~/bundles/beyond")
 
     @Scripts.Render("~/bundles/datatable")
+
+    @Scripts.Render("~/bundles/chosen")
 
     <!--Page Related Scripts-->
     @RenderSection("PageScripts", required: false)
