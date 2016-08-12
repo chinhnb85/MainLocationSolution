@@ -77,6 +77,9 @@ namespace MainShop
                 "~/assets/modules/plugins/chosen/js/chosen.jquery.min.js",
                 "~/assets/modules/plugins/jScrollPane/js/jquery.jscrollpane.min.js",
                 "~/assets/modules/plugins/tipsy/js/jquery.tipsy.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/editer").Include(
+               "~/assets/js/editors/summernote/summernote.js"));
         }
     }
 }

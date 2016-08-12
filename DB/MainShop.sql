@@ -203,3 +203,60 @@ FROM Category
 
 ) AS temp
 WHERE RowNumber > @LowerBand AND RowNumber <= @UpperBand
+go
+
+Create PROCEDURE [dbo].[Sp_Product_Insert]
+	@CategoryId int,
+	@ManufacturerId int,
+ 	@Name nvarchar(250),
+ 	@Url varchar(250),
+ 	@Avatar varchar(250),
+ 	@Price varchar(50),
+ 	@PriceKm varchar(50),
+ 	@Condition nvarchar(50),
+ 	@Weigh nvarchar(50),
+ 	@Origin nvarchar(50),
+ 	@Description ntext,
+ 	@Video ntext,
+ 	@IsHighlights bit,
+ 	@IsTop bit,
+ 	@CreatedBy varchar(50), 	
+ 	@Id int output
+AS
+BEGIN	
+	SET NOCOUNT ON;    
+	INSERT INTO Product(CategoryId,ManufacturerId,Name,Url,Avatar,Price,PriceKm,Condition,Weigh,Origin,Description,Video,IsHighlights,IsTop,CreatedBy) 
+	values(@CategoryId,@ManufacturerId,@Name,@Url,@Avatar,@Price,@PriceKm,@Condition,@Weigh,@Origin,@Description,@Video,@IsHighlights,@IsTop,@CreatedBy)
+	set @Id=SCOPE_IDENTITY()
+END
+go
+
+-- =============================================
+-- Author: chinhnb
+-- Create date: 10/08/2016
+-- Description:	
+-- =============================================
+Create procedure [dbo].[Sp_Product_ListAllPaging]
+
+(
+@pageIndex int,
+@pageSize int,
+@totalRow int output
+)
+
+as
+
+set nocount on
+
+DECLARE @UpperBand int, @LowerBand int
+
+SELECT @totalRow = COUNT(*) FROM Product					
+
+SET @LowerBand  = (@pageIndex - 1) * @PageSize
+SET @UpperBand  = (@pageIndex * @PageSize)
+SELECT * FROM (
+SELECT *,ROW_NUMBER() OVER(ORDER BY Id DESC) AS RowNumber 
+FROM Product
+
+) AS temp
+go

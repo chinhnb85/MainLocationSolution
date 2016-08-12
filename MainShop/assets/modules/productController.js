@@ -8,6 +8,9 @@ CmsShop.Product = {
 
 CmsShop.Product.Init = function () {
     var $this = CmsShop.Product;    
+   
+    $('#summernoteDescription').summernote({ height: 300 });
+    $('#summernoteVideo').summernote({ height: 300 });
 
     $this.LoadAllProduct(function (data) {
         $this.LoadDropdowListProduct(data);
