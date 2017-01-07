@@ -226,8 +226,6 @@ D:\Project\MainShopSolution\MainShop\bin\Microsoft.SqlServer.ConnectionInfo.dll
 D:\Project\MainShopSolution\MainShop\bin\Nest.dll
 D:\Project\MainShopSolution\MainShop\bin\Microsoft.SqlServer.Management.Sdk.Sfc.dll
 D:\Project\MainShopSolution\MainShop\bin\Microsoft.SqlServer.SqlEnum.dll
-D:\Project\MainShopSolution\MainShop\bin\Microsoft.SqlServer.Dmf.dll
-D:\Project\MainShopSolution\MainShop\bin\Microsoft.SqlServer.ServiceBrokerEnum.dll
 D:\Project\MainShopSolution\MainShop\bin\Microsoft.SqlServer.SqlClrProvider.dll
 D:\Project\MainShopSolution\MainShop\bin\LibCore.pdb
 D:\Project\MainShopSolution\MainShop\bin\ModelCMS.pdb

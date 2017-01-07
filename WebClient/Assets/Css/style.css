@@ -1,8 +1,8 @@
 ﻿/*
 Author: CHINHNB
 Date:03/08/2016
-    #e4234d/#C12B3C
-    #f1345d/#D8273A;
+    #e4234d/#2dc3e8
+    #f1345d/#3ac9ec;
 */
 *{
     margin:0px;
@@ -92,7 +92,7 @@ h3{
 }
 #wrapper .banner .content_banner .form_search{
 	padding:6px;
-	background-color:#C12B3C;
+	background-color:#2dc3e8;
 	margin-top:45px;
 	width:570px;
 	float:left;
@@ -126,12 +126,12 @@ h3{
 
 #wrapper .header1{
     width:100%;
-    background-color:#C12B3C;
+    background-color:#2dc3e8;
 }
 #wrapper .header1 .menu{
     height:45px;
     width:1300px;
-    background-color:#C12B3C;
+    background-color:#2dc3e8;
     margin: 0 auto;
 }
 #wrapper .header1 .menu .content_menu{
@@ -185,7 +185,7 @@ h3{
     display:block;
 }
 #wrapper .header1 .menu .content_menu ul.nav_menu li a:hover{
-    background-color:#D8273A;
+    background-color:#3ac9ec;
 }
 
 #wrapper .content{
@@ -207,20 +207,20 @@ h3{
     float:left;
 }
 #wrapper .content .content_1 .category .title{
-    background:#C12B3C;
+    background:#2dc3e8;
     height:50px;
     
 }
 #wrapper .content .content_1 .category .nav_menu_cat{
     position:absolute;
     z-index:9999999;
-    background: #D8273A;
+    background: #3ac9ec;
 }
 #wrapper .content .content_1 .category .nav_menu_cat .listcategory{
     
     width:320px;
     display:none;
-    background: #D8273A;
+    background: #3ac9ec;
     height:410px;
    
 }
@@ -229,7 +229,7 @@ h3{
     height:40px;
 }
 #wrapper .content .content_1 .category .listcategory li:hover{
-    background:#C12B3C;
+    background:#2dc3e8;
 }
 #wrapper .content .content_1 .category .listcategory li i{
     color:#fdb501;
@@ -248,7 +248,7 @@ h3{
     position: fixed;
     margin-left:320px;
     top:287px;
-    border:1px solid #D8273A;
+    border:1px solid #3ac9ec;
     z-index:9999999;
     width:650px;
     background:#fff;
@@ -467,7 +467,7 @@ h3{
     margin-left:45px;
 }
 #wrapper .content .content_2 .left .list_product .list_content ul.list li .description .btn:hover{
-     background:#D8273A;
+     background:#3ac9ec;
 }
 #wrapper .content .content_2 .right{
     width:320px;
@@ -886,10 +886,10 @@ h3{
         display:none;
     }
     #wrapper .content .content_2 .left .list_product .list_content ul.list li .description h3 a:hover{
-        color:#C12B3C;
+        color:#2dc3e8;
     }
     #wrapper .content .content_2 .right .product_run .content ul.listproduct li.description h3 a:hover{
-        color:#C12B3C;
+        color:#2dc3e8;
         font-weight:bold;
     }
     #wrapper .content .content_2 .right .product_run .content ul.listproduct li.image img:hover{
@@ -940,7 +940,7 @@ h3{
 .content_news .news_1 .description_news h3 a{
 	font-size:16px;
 	text-decoration:none;
-	color:#C12B3C;
+	color:#2dc3e8;
 	text-transform:underline;
 }
 .content_news .news_1 .description_news .time{

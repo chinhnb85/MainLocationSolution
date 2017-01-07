@@ -130,8 +130,6 @@ D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Microsoft.Web.Infrastructure
 D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
 D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
-D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Microsoft.SqlServer.Dmf.dll
-D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
 D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
 D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\Dapper.pdb
 D:\Project\MainShopSolution\Code\ModelCMS\bin\Debug\LibCore.pdb

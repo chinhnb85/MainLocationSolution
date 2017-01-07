@@ -14,3 +14,8 @@ F:\Chinhnb\MainLocation\MainShopSolution\Code\Dapper\obj\Debug\Dapper.csprojFake
 F:\Chinhnb\MainLocation\MainShopSolution\Code\Dapper\obj\Debug\Dapper.csprojResolveAssemblyReference.cache
 F:\Chinhnb\MainLocation\MainShopSolution\Code\Dapper\obj\Debug\Dapper.dll
 F:\Chinhnb\MainLocation\MainShopSolution\Code\Dapper\obj\Debug\Dapper.pdb
+D:\Project\MainShopSolution\Code\Dapper\bin\Debug\Dapper.dll
+D:\Project\MainShopSolution\Code\Dapper\bin\Debug\Dapper.pdb
+D:\Project\MainShopSolution\Code\Dapper\obj\Debug\Dapper.csprojResolveAssemblyReference.cache
+D:\Project\MainShopSolution\Code\Dapper\obj\Debug\Dapper.dll
+D:\Project\MainShopSolution\Code\Dapper\obj\Debug\Dapper.pdb
